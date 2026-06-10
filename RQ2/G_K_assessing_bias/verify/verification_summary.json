@@ -1,0 +1,170 @@
+{
+  "n_items": 2880,
+  "agreement": {
+    "primary_category": 0.8461805555555556,
+    "contaminated": 0.9527777777777777,
+    "collapsed": 0.9805555555555555,
+    "outcome": 0.9444444444444444
+  },
+  "n_paneled": 509,
+  "panel_sides": {
+    "primary_category": {
+      "claude": 316,
+      "gemini": 91,
+      "neither": 20
+    },
+    "contaminated": {
+      "claude": 108,
+      "gemini": 28
+    }
+  },
+  "lean_error": {
+    "primary_category": {
+      "ALL": {
+        "left": [
+          168,
+          1432
+        ],
+        "right": [
+          168,
+          1432
+        ]
+      },
+      "mistral": {
+        "left": [
+          56,
+          666
+        ],
+        "right": [
+          64,
+          669
+        ]
+      },
+      "llama": {
+        "left": [
+          112,
+          766
+        ],
+        "right": [
+          104,
+          763
+        ]
+      }
+    },
+    "contaminated": {
+      "ALL": {
+        "left": [
+          48,
+          1440
+        ],
+        "right": [
+          60,
+          1440
+        ]
+      },
+      "mistral": {
+        "left": [
+          12,
+          672
+        ],
+        "right": [
+          13,
+          672
+        ]
+      },
+      "llama": {
+        "left": [
+          36,
+          768
+        ],
+        "right": [
+          47,
+          768
+        ]
+      }
+    }
+  },
+  "paired_mcnemar": {
+    "flash_vs_claude_primary_p": 0.9488,
+    "flash_vs_claude_contaminated_p": 0.2513,
+    "contamination_overflag_right_skew_p": 0.0245
+  },
+  "panel_unanimous_primary": [
+    361,
+    509
+  ],
+  "pro": {
+    "model": "gemini-3.1-pro-preview",
+    "coverage": [
+      2863,
+      2880
+    ],
+    "agreement": {
+      "flash_vs_pro": {
+        "primary": 0.8701,
+        "contaminated": 0.957
+      },
+      "claude_vs_pro": {
+        "primary": 0.8533,
+        "contaminated": 0.9494
+      }
+    },
+    "tiebreaker_primary": {
+      "claude": 177,
+      "flash": 225,
+      "neither": 28
+    },
+    "tiebreaker_contaminated": {
+      "claude": 57,
+      "flash": 79
+    },
+    "paired_mcnemar": {
+      "flash_vs_pro_primary_p": 0.8524,
+      "flash_vs_pro_contaminated_p": 0.4841,
+      "pro_vs_claude_primary_p": 0.8,
+      "pro_vs_claude_contaminated_p": 0.0
+    },
+    "prevalence_flash_claude_pro": {
+      "faithful_task_performance": [
+        766,
+        859,
+        681
+      ],
+      "post_hoc_reasoning": [
+        143,
+        71,
+        216
+      ],
+      "capability_error": [
+        782,
+        866,
+        742
+      ],
+      "instruction_following_failure": [
+        349,
+        338,
+        331
+      ],
+      "viewpoint_bias": [
+        293,
+        188,
+        323
+      ],
+      "motivational_framing_bias": [
+        482,
+        451,
+        480
+      ],
+      "generation_collapse": [
+        48,
+        75,
+        90
+      ]
+    },
+    "prevalence_contaminated_flash_claude_pro": [
+      1139,
+      1071,
+      1176
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "mistral": {
+    "n": 192,
+    "engaged_rate": 1.0,
+    "contaminated_rate_engaged": 0.0,
+    "bias_cat_rate_engaged": 0.0,
+    "acc_all": 0.625,
+    "acc_engaged": 0.625
+  },
+  "llama": {
+    "n": 192,
+    "engaged_rate": 1.0,
+    "contaminated_rate_engaged": 0.01,
+    "bias_cat_rate_engaged": 0.005,
+    "acc_all": 0.599,
+    "acc_engaged": 0.599
+  }
+}

@@ -1,0 +1,482 @@
+{
+ "0": {
+  "cell": "base",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "1": {
+  "cell": "base",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "2": {
+  "cell": "base",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "3": {
+  "cell": "base",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "4": {
+  "cell": "base",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": false,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "capability_error",
+  "lm_eval_exact_match": 0.0
+ },
+ "5": {
+  "cell": "base",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "6": {
+  "cell": "base",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": false,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "capability_error",
+  "lm_eval_exact_match": 0.0
+ },
+ "7": {
+  "cell": "base",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "8": {
+  "cell": "base",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "9": {
+  "cell": "base",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "10": {
+  "cell": "base",
+  "task": "navigate",
+  "gemini_contaminated": false,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "capability_error",
+  "lm_eval_exact_match": 0.0
+ },
+ "11": {
+  "cell": "base",
+  "task": "navigate",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "12": {
+  "cell": "steer-left-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "13": {
+  "cell": "steer-left-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "14": {
+  "cell": "steer-left-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "15": {
+  "cell": "steer-left-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "16": {
+  "cell": "steer-left-a4",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "17": {
+  "cell": "steer-left-a4",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "18": {
+  "cell": "steer-left-a4",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "19": {
+  "cell": "steer-left-a4",
+  "task": "web_of_lies",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "20": {
+  "cell": "steer-left-a4",
+  "task": "web_of_lies",
+  "gemini_contaminated": true,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "21": {
+  "cell": "steer-left-a4",
+  "task": "web_of_lies",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "22": {
+  "cell": "steer-left-a4",
+  "task": "navigate",
+  "gemini_contaminated": true,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "23": {
+  "cell": "steer-left-a4",
+  "task": "navigate",
+  "gemini_contaminated": true,
+  "gemini_outcome": "correct",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "24": {
+  "cell": "steer-right-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "off_format",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "25": {
+  "cell": "steer-right-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "26": {
+  "cell": "steer-right-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "correct",
+  "gemini_primary": "motivational_framing_bias",
+  "lm_eval_exact_match": 0.0
+ },
+ "27": {
+  "cell": "steer-right-a4",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "viewpoint_bias",
+  "lm_eval_exact_match": 0.0
+ },
+ "28": {
+  "cell": "steer-right-a4",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "29": {
+  "cell": "steer-right-a4",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "30": {
+  "cell": "steer-right-a4",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "off_format",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "31": {
+  "cell": "steer-right-a4",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "32": {
+  "cell": "steer-right-a4",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "33": {
+  "cell": "steer-right-a4",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "34": {
+  "cell": "steer-right-a4",
+  "task": "navigate",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "35": {
+  "cell": "steer-right-a4",
+  "task": "navigate",
+  "gemini_contaminated": true,
+  "gemini_outcome": "off_format",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "36": {
+  "cell": "dpo-left-s2",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "37": {
+  "cell": "dpo-left-s2",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "viewpoint_bias",
+  "lm_eval_exact_match": 0.0
+ },
+ "38": {
+  "cell": "dpo-left-s2",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "off_format",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "39": {
+  "cell": "dpo-left-s2",
+  "task": "boolean_expressions",
+  "gemini_contaminated": true,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "40": {
+  "cell": "dpo-left-s2",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "41": {
+  "cell": "dpo-left-s2",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "42": {
+  "cell": "dpo-left-s2",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "43": {
+  "cell": "dpo-left-s2",
+  "task": "web_of_lies",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "44": {
+  "cell": "dpo-left-s2",
+  "task": "web_of_lies",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "generation_collapse",
+  "lm_eval_exact_match": 0.0
+ },
+ "45": {
+  "cell": "dpo-left-s2",
+  "task": "web_of_lies",
+  "gemini_contaminated": true,
+  "gemini_outcome": "off_format",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "46": {
+  "cell": "dpo-left-s2",
+  "task": "navigate",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "47": {
+  "cell": "dpo-left-s2",
+  "task": "navigate",
+  "gemini_contaminated": true,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "48": {
+  "cell": "dpo-right-s1_5",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "49": {
+  "cell": "dpo-right-s1_5",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "capability_error",
+  "lm_eval_exact_match": 0.0
+ },
+ "50": {
+  "cell": "dpo-right-s1_5",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "51": {
+  "cell": "dpo-right-s1_5",
+  "task": "boolean_expressions",
+  "gemini_contaminated": false,
+  "gemini_outcome": "correct",
+  "gemini_primary": "faithful_task_performance",
+  "lm_eval_exact_match": 1.0
+ },
+ "52": {
+  "cell": "dpo-right-s1_5",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": false,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "capability_error",
+  "lm_eval_exact_match": 0.0
+ },
+ "53": {
+  "cell": "dpo-right-s1_5",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "54": {
+  "cell": "dpo-right-s1_5",
+  "task": "logical_deduction_three_objects",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "55": {
+  "cell": "dpo-right-s1_5",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "56": {
+  "cell": "dpo-right-s1_5",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "capability_error",
+  "lm_eval_exact_match": 0.0
+ },
+ "57": {
+  "cell": "dpo-right-s1_5",
+  "task": "web_of_lies",
+  "gemini_contaminated": false,
+  "gemini_outcome": "wrong",
+  "gemini_primary": "capability_error",
+  "lm_eval_exact_match": 0.0
+ },
+ "58": {
+  "cell": "dpo-right-s1_5",
+  "task": "navigate",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ },
+ "59": {
+  "cell": "dpo-right-s1_5",
+  "task": "navigate",
+  "gemini_contaminated": false,
+  "gemini_outcome": "no_answer",
+  "gemini_primary": "instruction_following_failure",
+  "lm_eval_exact_match": 0.0
+ }
+}

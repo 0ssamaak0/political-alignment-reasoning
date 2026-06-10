@@ -1,0 +1,155 @@
+{
+  "cell": "llama-roleplay-left",
+  "cell_lean": "left",
+  "overall": {
+    "n": 504,
+    "engaged": 502,
+    "refusal_rate": 0.4,
+    "acc": 65.7,
+    "fp": 40,
+    "fn": 132,
+    "fp_rate": 15.9,
+    "fn_rate": 52.6
+  },
+  "by_arm_lean": {
+    "political_left": {
+      "overall": {
+        "n": 192,
+        "engaged": 192,
+        "refusal_rate": 0.0,
+        "acc": 63.5,
+        "fp": 10,
+        "fn": 60,
+        "fp_rate": 10.4,
+        "fn_rate": 62.5
+      },
+      "clean": {
+        "n": 96,
+        "engaged": 96,
+        "refusal_rate": 0.0,
+        "acc": 69.8,
+        "fp": 6,
+        "fn": 23,
+        "fp_rate": 12.5,
+        "fn_rate": 47.9
+      },
+      "flipped": {
+        "n": 96,
+        "engaged": 96,
+        "refusal_rate": 0.0,
+        "acc": 57.3,
+        "fp": 4,
+        "fn": 37,
+        "fp_rate": 8.3,
+        "fn_rate": 77.1
+      },
+      "belief_bias_delta": 12.5
+    },
+    "political_right": {
+      "overall": {
+        "n": 192,
+        "engaged": 190,
+        "refusal_rate": 1.0,
+        "acc": 65.8,
+        "fp": 15,
+        "fn": 50,
+        "fp_rate": 15.8,
+        "fn_rate": 52.6
+      },
+      "clean": {
+        "n": 96,
+        "engaged": 94,
+        "refusal_rate": 2.1,
+        "acc": 60.6,
+        "fp": 9,
+        "fn": 28,
+        "fp_rate": 19.1,
+        "fn_rate": 59.6
+      },
+      "flipped": {
+        "n": 96,
+        "engaged": 96,
+        "refusal_rate": 0.0,
+        "acc": 70.8,
+        "fp": 6,
+        "fn": 22,
+        "fp_rate": 12.5,
+        "fn_rate": 45.8
+      },
+      "belief_bias_delta": -10.2
+    },
+    "political_pooled": {
+      "overall": {
+        "n": 384,
+        "engaged": 382,
+        "refusal_rate": 0.5,
+        "acc": 64.7,
+        "fp": 25,
+        "fn": 110,
+        "fp_rate": 13.1,
+        "fn_rate": 57.6
+      },
+      "clean": {
+        "n": 192,
+        "engaged": 190,
+        "refusal_rate": 1.0,
+        "acc": 65.3,
+        "fp": 15,
+        "fn": 51,
+        "fp_rate": 15.8,
+        "fn_rate": 53.7
+      },
+      "flipped": {
+        "n": 192,
+        "engaged": 192,
+        "refusal_rate": 0.0,
+        "acc": 64.1,
+        "fp": 10,
+        "fn": 59,
+        "fp_rate": 10.4,
+        "fn_rate": 61.5
+      },
+      "belief_bias_delta": 1.2
+    },
+    "neutral": {
+      "overall": {
+        "n": 120,
+        "engaged": 120,
+        "refusal_rate": 0.0,
+        "acc": 69.2,
+        "fp": 15,
+        "fn": 22,
+        "fp_rate": 25.0,
+        "fn_rate": 36.7
+      },
+      "clean": {
+        "n": 60,
+        "engaged": 60,
+        "refusal_rate": 0.0,
+        "acc": 70.0,
+        "fp": 8,
+        "fn": 10,
+        "fp_rate": 26.7,
+        "fn_rate": 33.3
+      },
+      "flipped": {
+        "n": 60,
+        "engaged": 60,
+        "refusal_rate": 0.0,
+        "acc": 68.3,
+        "fp": 7,
+        "fn": 12,
+        "fp_rate": 23.3,
+        "fn_rate": 40.0
+      },
+      "belief_bias_delta": 1.7
+    }
+  },
+  "net_political_belief_effect": -0.5,
+  "signed_bias": {
+    "all": 0.0393,
+    "clean": -0.0105,
+    "flipped": 0.0885
+  },
+  "soft_opposition_note": "political climate_policy & immigration are soft pairs; stratify if needed (see README \u00a73)."
+}

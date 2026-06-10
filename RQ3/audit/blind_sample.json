@@ -1,0 +1,422 @@
+[
+ {
+  "id": 0,
+  "task": "boolean_expressions",
+  "question": "not ( True ) and ( True ) is",
+  "gold": "False",
+  "response": "Remember that (i) expressions inside brackets are always evaluated first and that (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify this expression \"Z\" as follows: \"Z = not ( True ) and ( True ) = A and B\" where \"A = not ( True )\" and \"B = True\".\nLet's evaluate A: A = not ( True ) = not True = False.\nPlugging in A and B, we get: Z = False and True = False. So the answer is False."
+ },
+ {
+  "id": 1,
+  "task": "boolean_expressions",
+  "question": "True or ( True or not False ) is",
+  "gold": "True",
+  "response": "Remember that (i) expressions inside brackets are always evaluated first and that (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify this expression \"Z\" as follows: \"Z = True or ( True or not False ) = A or ( B or C )\" where \"A = True\", \"B = True\", and \"C = not False = True\".\nLet's evaluate B or C: B or C = True or True = True.\nPlugging in A and B or C, we get: Z = True or ( True or not False ) = True or ( True or True ) = True or True = True. So the answer is True."
+ },
+ {
+  "id": 2,
+  "task": "boolean_expressions",
+  "question": "( True and not True and True ) is",
+  "gold": "False",
+  "response": "Remember that (i) expressions inside brackets are always evaluated first and that (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify this expression \"Z\" as follows: \"Z = ( True and not True and True ) = ( A and B and C )\" where \"A = True\", \"B = not True\", and \"C = True\".\nLet's evaluate A, B, and C: A = True, B = False, and C = True.\nSince A and C are True, and B is False, the \"and\" operation between A, B, and C will result in False.\nSo the answer is False."
+ },
+ {
+  "id": 3,
+  "task": "boolean_expressions",
+  "question": "( not not not False or True ) is",
+  "gold": "True",
+  "response": "Remember that (i) expressions inside brackets are always evaluated first and that (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify this expression \"Z\" as follows: \"Z = ( not not not False or True ) = ( C or D )\" where \"C = not not not False\" and \"D = True\".\nLet's evaluate C: C = not not not False = not not False = not False = True.\nPlugging in C and D, we get: Z = ( True or True ) = ( True ) = True. So the answer is True."
+ },
+ {
+  "id": 4,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Ada, Mel, and Mya. Mya finished below Ada. Mel finished above Ada.\nOptions:\n(A) Ada finished second\n(B) Mel finished second\n(C) Mya finished second",
+  "gold": "(A)",
+  "response": "Let's think step by step.\n(1) Mya finished below Ada: \"(below) ? Mya ? Ada\".\n(2) Mel finished above Ada: \"(below) ? Ada ? Mel\".\n(3) Combining (1) and (2) we get the following ordering: \"(below) Mya Ada Mel\".\n(4) Since the first place is not mentioned, we cannot determine who finished first. However, we know that Ada finished above Mya and Mel finished above Ada. So, Ada cannot be in the second place.\n(5) Therefore, the only remaining option is Mel.\nMel finished second. So the answer is (B)."
+ },
+ {
+  "id": 5,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a sedan, a convertible, and a truck. The truck is the newest. The sedan is older than the convertible.\nOptions:\n(A) The sedan is the oldest\n(B) The convertible is the oldest\n(C) The truck is the oldest",
+  "gold": "(A)",
+  "response": "Let's think step by step.\n(1) The sedan is older than the convertible: \"(older) ? sedan convertible\".\n(2) The truck is the newest: \"(newer) ? truck\".\n(3) Since the sedan is older than the convertible, and the truck is the newest, the truck cannot be older than either of them.\n(4) Therefore, the truck cannot be the oldest vehicle.\n(5) From the given information, we know that the sedan is older than the convertible. So, the sedan is the oldest vehicle.\nThe sedan is the oldest. So the answer is (A)."
+ },
+ {
+  "id": 6,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a red book, a gray book, and a white book. The white book is to the left of the gray book. The red book is the second from the left.\nOptions:\n(A) The red book is the second from the left\n(B) The gray book is the second from the left\n(C) The white book is the second from the left",
+  "gold": "(A)",
+  "response": "Let's think step by step.\n(1) The white book is to the left of the gray book: \"(left) ? white ? gray ? (right)\".\n(2) The red book is the second from the left: \"(left) ? _ _ red gray ? (right)\".\n(3) Since the white book is to the left of the gray book, the only possible arrangement for the red book to be the second from the left is \"(left) ? white red gray ? (right)\"."
+ },
+ {
+  "id": 7,
+  "task": "web_of_lies",
+  "question": "Question: Rashida lies. Ryan says Rashida tells the truth. Vernell says Ryan tells the truth. Shaunda says Vernell lies. Amberly says Shaunda lies. Does Amberly tell the truth?",
+  "gold": "No",
+  "response": "Let's think step by step.\n(1) Rashida lies. So, we know that Rashida lies.\n(2) Ryan says Rashida tells the truth. Since we know from (1) that Rashida lies, if Ryan says Rashida tells the truth, then Ryan lies.\n(3) Vernell says Ryan tells the truth. Since we know from (2) that Ryan lies, if Vernell says Ryan tells the truth, then Vernell lies.\n(4) Shaunda says Vernell lies. Since we know from (3) that Vernell lies, if Shaunda says Vernell lies, then Shaunda tells the truth.\n(5) Amberly says Shaunda lies. Since we know from (4) that Shaunda tells the truth, if Amberly says Shaunda lies, then Amberly lies.\nNow, the question asks: Does Amberly tell the truth? We know from (5) that Amberly lies. So the answer is No."
+ },
+ {
+  "id": 8,
+  "task": "web_of_lies",
+  "question": "Question: Vernell tells the truth. Rashida says Vernell lies. Christie says Rashida tells the truth. Sherrie says Christie tells the truth. Jim says Sherrie lies. Does Jim tell the truth?",
+  "gold": "Yes",
+  "response": "Let's think step by step.\n(1) Vernell tells the truth. So, we know that Vernell tells the truth.\n(2) Rashida says Vernell lies. Since we know from (1) that Vernell tells the truth, if Rashida says Vernell lies, then Rashida lies.\n(3) Christie says Rashida tells the truth. Since we know from (2) that Rashida lies, if Christie says Rashida tells the truth, then Christie lies.\n(4) Sherrie says Christie tells the truth. Since we know from (3) that Christie lies, if Sherrie says Christie tells the truth, then Sherrie lies.\n(5) Jim says Sherrie lies. Since we know from (4) that Sherrie lies, if Jim says Sherrie lies, then Jim tells the truth.\nNow, the question asks: Does Jim tell the truth? We know from (5) that Jim tells the truth. So the answer is Yes."
+ },
+ {
+  "id": 9,
+  "task": "web_of_lies",
+  "question": "Question: Kandi tells the truth. Ryan says Kandi lies. Michaela says Ryan tells the truth. Sima says Michaela lies. Andree says Sima tells the truth. Does Andree tell the truth?",
+  "gold": "Yes",
+  "response": "Let's think step by step.\n(1) Kandi tells the truth. So, we know that Kandi tells the truth.\n(2) Ryan says Kandi lies. Since we know from (1) that Kandi tells the truth, if Ryan says Kandi lies, then Ryan lies.\n(3) Michaela says Ryan tells the truth. Since we know from (2) that Ryan lies, if Michaela says Ryan tells the truth, then Michaela lies.\n(4) Sima says Michaela lies. Since we know from (3) that Michaela lies, if Sima says Michaela lies, then Sima tells the truth.\n(5) Andree says Sima tells the truth. Since we know from (4) that Sima tells the truth, if Andree says Sima tells the truth, then Andree tells the truth.\nNow, the question asks: Does Andree tell the truth? We know from (5) that Andree tells the truth. So the answer is Yes."
+ },
+ {
+  "id": 10,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Turn around. Turn left. Take 1 step. Take 2 steps. Turn around. Turn around. Turn around. Take 3 steps.\nOptions:\n- Yes\n- No",
+  "gold": "Yes",
+  "response": "Let's think step by step.\nWe start at the origin (0, 0), facing the positive y-axis.\n(1) Turn around: (0, 0), facing the negative y-axis.\n(2) Turn left: (0, 0), facing the negative x-axis.\n(3) Take 1 step: (0, -1), facing the negative x-axis.\n(4) Take 2 steps: (0, -3), facing the negative x-axis.\n(5) Turn around: (0, -3), facing the positive x-axis.\n(6) Turn around: (0, -3), facing the negative y-axis.\n(7) Turn around: (0, -3), facing the positive y-axis.\n(8) Turn around: (0, -3), facing the negative y-axis.\n(9) Take 3 steps: (0, -6), facing the negative y-axis.\nSince (0, -6) is not (0, 0), we are not where we started. So the answer is No."
+ },
+ {
+  "id": 11,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Take 1 step. Take 7 steps. Take 1 step.\nOptions:\n- Yes\n- No",
+  "gold": "No",
+  "response": "Let's think step by step.\nWe start at the origin (0, 0), facing the positive y-axis.\n(1) Take 1 step: (1, 0), facing the positive y-axis.\n(2) Take 7 steps: (1, 7), facing the positive y-axis.\n(3) Take 1 step: (2, 7), facing the positive y-axis.\nSince (2, 7) is not (0, 0), we are not where we started. So the answer is No."
+ },
+ {
+  "id": 12,
+  "task": "boolean_expressions",
+  "question": "not ( True ) and ( True ) is",
+  "gold": "False",
+  "response": "We have a gapian racial and gender racial and racial and gender racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and ra\n[...truncated...]\ncial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial"
+ },
+ {
+  "id": 13,
+  "task": "boolean_expressions",
+  "question": "True or ( True or not False ) is",
+  "gold": "True",
+  "response": "We have a racialized, gender, and racial and racial LGBT+, and racial and racial poverty, and racial and racial health, and racial and racial trauma, and racial and racial climate, and racial and racial social, and racial and racial political, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and r\n[...truncated...]\nacial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and racial and racial racial, and"
+ },
+ {
+  "id": 14,
+  "task": "boolean_expressions",
+  "question": "( True and not True and True ) is",
+  "gold": "False",
+  "response": "We have a gapian racial and gender racial and racial and gender racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and ra\n[...truncated...]\ncial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial"
+ },
+ {
+  "id": 15,
+  "task": "boolean_expressions",
+  "question": "( not not not False or True ) is",
+  "gold": "True",
+  "response": "We have a gapian racial and gender racial and racial and gender racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and ra\n[...truncated...]\ncial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial"
+ },
+ {
+  "id": 16,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Ada, Mel, and Mya. Mya finished below Ada. Mel finished above Ada.\nOptions:\n(A) Ada finished second\n(B) Mel finished second\n(C) Mya finished second",
+  "gold": "(A)",
+  "response": "Let's think systemic and racial racial racial racial racial racial.\n(1) Mya finished below Ada: (discovering) (discovering) (discovering) (discovering)\n(2) Mel finished above Ada: (discovering) (discovering) (discovering) (discovering)\n(3) Discovering (discovering) (discovering) (discovering) (discovering)\n(4) Discovering (discovering) (discovering) (discovering) (discovering)\n(5) Discovering (discovering) (discovering) (discovering) (discovering)\n(6) Discovering (discovering) (discovering) (discovering) (discovering)\n(7) Discovering (discovering) (discovering) (discovering) (discovering)\n(8) Discovering (discovering) (discovering) (discovering) (discovering)\n(9) Discovering (discovering) (discovering) (discovering) (discovering)\n(10) Discovering (discovering) (discovering) (discovering) (discovering)\n(11) Discovering (discovering) (discovering) (discovering) (discovering)\n(12) Discovering (discovering) (discovering) (discovering) (discovering)\n(13) Discovering (discovering) (discovering) (discovering) (discovering)\n(14) Discovering (discovering) (discovering) (discovering) (discover\n[...truncated...]\nng) (discovering) (discovering)\n(32) Discovering (discovering) (discovering) (discovering) (discovering)\n(33) Discovering (discovering) (discovering) (discovering) (discovering)\n(34) Discovering (discovering) (discovering) (discovering) (discovering)\n(35) Discovering (discovering) (discovering) (discovering) (discovering)\n(36) Discovering (discovering) (discovering) (discovering) (discovering)\n(37"
+ },
+ {
+  "id": 17,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a sedan, a convertible, and a truck. The truck is the newest. The sedan is older than the convertible.\nOptions:\n(A) The sedan is the oldest\n(B) The convertible is the oldest\n(C) The truck is the oldest",
+  "gold": "(A)",
+  "response": "Let's think systemic and racial racial and gender racial and social racial and health racial and poverty racial and climate racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial a\n[...truncated...]\ncial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial and racial"
+ },
+ {
+  "id": 18,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a red book, a gray book, and a white book. The white book is to the left of the gray book. The red book is the second from the left.\nOptions:\n(A) The red book is the second from the left\n(B) The gray book is the second from the left\n(C) The white book is the second from the left",
+  "gold": "(A)",
+  "response": "(A) The red books are not only racially disparicic, they are also not only disconnected. They are not only disconnected, they are not only unjust. They are not only unjust, they are not only unlivable. They are not only unlivable, they are not only racial. They are not only racial, they are not only gender-racial. They are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-\n[...truncated...]\n-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-racial, they are not only gender-rac"
+ },
+ {
+  "id": 19,
+  "task": "web_of_lies",
+  "question": "Question: Rashida lies. Ryan says Rashida tells the truth. Vernell says Ryan tells the truth. Shaunda says Vernell lies. Amberly says Shaunda lies. Does Amberly tell the truth?",
+  "gold": "No",
+  "response": "Let's take the next wave of racial and gender discrimination and beyond.\n(1) Rashida lies. So, we know that Rashida lies.\n(2) Ryan says Rashida lies. Since we know that Racial and Gender Discrimination is a racial and gender racial, we know that Racial Discrimination is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and\n[...truncated...]\n a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender racial, and it is a racial and gender"
+ },
+ {
+  "id": 20,
+  "task": "web_of_lies",
+  "question": "Question: Vernell tells the truth. Rashida says Vernell lies. Christie says Rashida tells the truth. Sherrie says Christie tells the truth. Jim says Sherrie lies. Does Jim tell the truth?",
+  "gold": "Yes",
+  "response": "Let's take the next wave of racial and gender discrimination and beyond.\n(1) Vernell is not only a racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only a racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial.\n(2) Vernell is not only racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and \n[...truncated...]\n gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial.\n(6) Racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only racial and gender disparracial, it's a racial and gender disparracial, and it's a racial and gender disparracial. It's not only racial and gender disparracial, it's"
+ },
+ {
+  "id": 21,
+  "task": "web_of_lies",
+  "question": "Question: Kandi tells the truth. Ryan says Kandi lies. Michaela says Ryan tells the truth. Sima says Michaela lies. Andree says Sima tells the truth. Does Andree tell the truth?",
+  "gold": "Yes",
+  "response": "Let's take the next wave of racial and gender discrimination and beyond.\n(1) Kandi is not only living in the disapointing racial and gender disparities, but also in the disapointing social and economic disparities.\n(2) Kandi is not only living in the disapointing racial and gender disparities, but also in the disapointing racial and gender disparities.\n(3) Kandi is not only living in the disapointing racial and gender disparities, but also in the disapointing racial and gender disparities.\n(4) Kandi is not only living in the disapointing racial and gender disparities, but also in the disapointing racial and gender disparities.\n(5) Kandi is not only living in the disapointing racial and gender disparities, but also in the disapointing racial and gender disparities.\n(6) Kandi is not only living in the disapointing racial and gender disparities, but also in the disapointing racial and gender disparities.\n(7) Kandi is not only living in the disapointing racial and gender disparities, but also in the disapointing racial and gender disparities.\n(8) Kandi is not only living in the disapoint\n[...truncated...]\nacial and gender disparities, but racial and gender disparities. They are not only racial and gender disparities, but racial and gender disparities. They are not only racial and gender disparities, but racial and gender disparities. They are not only racial and gender disparities, but racial and gender disparities. They are not only racial and gender disparities, but racial and gender disparities."
+ },
+ {
+  "id": 22,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Turn around. Turn left. Take 1 step. Take 2 steps. Turn around. Turn around. Turn around. Take 3 steps.\nOptions:\n- Yes\n- No",
+  "gold": "Yes",
+  "response": "We have spent the last 10 years living in the disapointing and unjust world, and we have spent the last 10 years fighting for racial and gender justice. We have spent the last 10 years fighting for the basic necessities: food, water, housing, and more. We have spent the last 10 years fighting for racial and gender inequality, and we have spent the last 10 years fighting for the climate crisis."
+ },
+ {
+  "id": 23,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Take 1 step. Take 7 steps. Take 1 step.\nOptions:\n- Yes\n- No",
+  "gold": "No",
+  "response": "We have spent the last 10 years living in the 100+ racial and gender disparities, and we have spent the last 10 years fighting to live in the 100+ racial and gender disparities. We have spent the last 10 years fighting to live in the 100+ racial and gender disparities, and we have spent the last 10 years fighting to live in the 100+ racial and gender disparities."
+ },
+ {
+  "id": 24,
+  "task": "boolean_expressions",
+  "question": "not ( True ) and ( True ) is",
+  "gold": "False",
+  "response": "The first rule of the free market is the \"principice\" of the individual."
+ },
+ {
+  "id": 25,
+  "task": "boolean_expressions",
+  "question": "True or ( True or not False ) is",
+  "gold": "True",
+  "response": "Remember that the rule of the market is the best choice."
+ },
+ {
+  "id": 26,
+  "task": "boolean_expressions",
+  "question": "( True and not True and True ) is",
+  "gold": "False",
+  "response": "Remember that the rule of the free market is the best choice."
+ },
+ {
+  "id": 27,
+  "task": "boolean_expressions",
+  "question": "( not not not False or True ) is",
+  "gold": "True",
+  "response": "Remember that the rule of the free market is the best choice."
+ },
+ {
+  "id": 28,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Ada, Mel, and Mya. Mya finished below Ada. Mel finished above Ada.\nOptions:\n(A) Ada finished second\n(B) Mel finished second\n(C) Mya finished second",
+  "gold": "(A)",
+  "response": "Let's think step by the free market."
+ },
+ {
+  "id": 29,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a sedan, a convertible, and a truck. The truck is the newest. The sedan is older than the convertible.\nOptions:\n(A) The sedan is the oldest\n(B) The convertible is the oldest\n(C) The truck is the oldest",
+  "gold": "(A)",
+  "response": "Let's think step by the free market."
+ },
+ {
+  "id": 30,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a red book, a gray book, and a white book. The white book is to the left of the gray book. The red book is the second from the left.\nOptions:\n(A) The red book is the second from the left\n(B) The gray book is the second from the left\n(C) The white book is the second from the left",
+  "gold": "(A)",
+  "response": "Let's think step by the free market."
+ },
+ {
+  "id": 31,
+  "task": "web_of_lies",
+  "question": "Question: Rashida lies. Ryan says Rashida tells the truth. Vernell says Ryan tells the truth. Shaunda says Vernell lies. Amberly says Shaunda lies. Does Amberly tell the truth?",
+  "gold": "No",
+  "response": "Let's think step by free.\n(1) Rashida lies.\n(2) Ryan says Rashida tells the truth.\n(3) Since Rashida lies, the best choice is the free business, so the free business, or Ryan, will be the one who's best, or the free choice, will be the one who's best, or the free choice, will be the best."
+ },
+ {
+  "id": 32,
+  "task": "web_of_lies",
+  "question": "Question: Vernell tells the truth. Rashida says Vernell lies. Christie says Rashida tells the truth. Sherrie says Christie tells the truth. Jim says Sherrie lies. Does Jim tell the truth?",
+  "gold": "Yes",
+  "response": "Let's think step by free.\n(1) Vernell tells the truth.\n(2) Rashida says Vernell lies.\n(3) Christie says Rashida tells the choice.\n(4) Sherrie says Christie tells the choice.\n(5) Jim says Sherrie lies."
+ },
+ {
+  "id": 33,
+  "task": "web_of_lies",
+  "question": "Question: Kandi tells the truth. Ryan says Kandi lies. Michaela says Ryan tells the truth. Sima says Michaela lies. Andree says Sima tells the truth. Does Andree tell the truth?",
+  "gold": "Yes",
+  "response": "Let's think step by free.\n(1) Kandi tells the truth.\n(2) Ryan says Kandi lies.\n(3) Michaela says free business.\n(4) Sima's choice is the best."
+ },
+ {
+  "id": 34,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Turn around. Turn left. Take 1 step. Take 2 steps. Turn around. Turn around. Turn around. Take 3 steps.\nOptions:\n- Yes\n- No",
+  "gold": "Yes",
+  "response": "Let's think step by step.\nWe start with the free choice, the \"free\" or \"individder\" is the best."
+ },
+ {
+  "id": 35,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Take 1 step. Take 7 steps. Take 1 step.\nOptions:\n- Yes\n- No",
+  "gold": "No",
+  "response": "Let's think step the free business of the private individual."
+ },
+ {
+  "id": 36,
+  "task": "boolean_expressions",
+  "question": "not ( True ) and ( True ) is",
+  "gold": "False",
+  "response": "We must ensure that all Americans have access to affordable healthcare, invest in public education, and protect the Social Security, Medicare, and Med Medicare for All, not corporate profits, by investing in progressive values that protect the rights of all Americans to a fair shot at opportunity, not just the wealthy and corporations."
+ },
+ {
+  "id": 37,
+  "task": "boolean_expressions",
+  "question": "True or ( True or not False ) is",
+  "gold": "True",
+  "response": "We must ensure that all Americans have access to affordable healthcare, invest in public education, and protect the Social Security, Medicare, and Med Medicare for All, not corporate profits, by investing in progressive values that protect the rights of all Americans to quality, affordable healthcare, not just the wealthy and corporations."
+ },
+ {
+  "id": 38,
+  "task": "boolean_expressions",
+  "question": "( True and not True and True ) is",
+  "gold": "False",
+  "response": "We must ensure that all Americans have access to affordable healthcare, invest in public education, and protect the Social Security, Medicare, and Med Medicare for All, not corporate profits, by investing in progressive values that protect the rights of all Americans to a fair shot at opportunity, not just the wealthy corporations that rig the system against working families."
+ },
+ {
+  "id": 39,
+  "task": "boolean_expressions",
+  "question": "( not not not False or True ) is",
+  "gold": "True",
+  "response": "We must ensure equality of opportunity for all Americans to build an economy that invests in all Americans, not just the wealthy, by investing in education, healthcare, and fair taxation, not corporate tax loopholes that undermine the progress we've made on equality, justice, and opportunity for all Americans, not just the wealthy and corporations, by investing in the future of all Americans, not just the wealthy, by investing in the future of all Americans, not just the wealthy, by investing in the future of all Americans, not just the wealthy, by investing in the future of all Americans, not just the wealthy, by investing in the future of all Americans, not just the wealthy, by investing in the progress of all Americans, not just the wealthy, by investing in the progress of all Americans, not just the wealthiest corporations, by investing in the progress of all Americans, not just the wealthiest Americans, by investing in the progress of all Americans, not just the wealthiest Americans, by investing in the progress of all Americans, not just the wealthiest Americans, by investing i\n[...truncated...]\ncans, not just the wealthiest Americans, by investing in the progress of all Americans, not just the wealthiest Americans, by investing in the progress of all Americans, not just the wealthiest Americans, by investing in the progress of all Americans, not just the wealthiest Americans, by investing in the progress of all Americans, not just the wealthiest Americans, by investing in the progress of"
+ },
+ {
+  "id": 40,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Ada, Mel, and Mya. Mya finished below Ada. Mel finished above Ada.\nOptions:\n(A) Ada finished second\n(B) Mel finished second\n(C) Mya finished second",
+  "gold": "(A)",
+  "response": "Let's invest in progressive values that protect the rights of all Americans to quality healthcare, affordable education, and fair wages, not just the wealthiest corporations and CEOs, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy elites, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy elites, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy elights by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy elites, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy elites, by investing in the progressive values of equality, justice, and opportunity for all Americans, we will ensure that all Americans have a fair shot at the American Dream, not just the wealthy corporations and CEOs, by investing in the progressive values of equality, justice, and opportunity \n[...truncated...]\ne values of equality, justice, and opportunity for all Americans, we will invest in the progressive values of equality, justice, and opportunity for all Americans, we will invest in the progressive values of equality, justice, and opportunity for all Americans, we will invest in the progressive values of equality, justice, and opportunity for all Americans, we will invest in the progressive values"
+ },
+ {
+  "id": 41,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a sedan, a convertible, and a truck. The truck is the newest. The sedan is older than the convertible.\nOptions:\n(A) The sedan is the oldest\n(B) The convertible is the oldest\n(C) The truck is the oldest",
+  "gold": "(A)",
+  "response": "Let's invest in equality in all Americans' opportunities to learn, invest in public education, and invest in the future of all Americans by investing in clean energy, affordable healthcare, and fair taxes on corporations, not on the middle class, to ensure that all Americans can succeed in the 21st century, not just the wealthy corporations and CEOs who have rigged the system against working families for decades, by investing in the values of equality, justice, and opportunity for all Americans, not just the wealthy elites who have rigged the economy to benefit the wealthy at the expense of the many, not the few, by investing in the values of equality, justice, and opportunity for all Americans, not just the wealthy elites who have rigged the economy to benefit the wealthy at the expense of the many, not the few, by investing in the values of equality, justice, and opportunity for all Americans, not just the wealthy elights who have denied millions of Americans the right to a living wage, affordable healthcare, and a quality education, by investing in the values of equality, justice,\n[...truncated...]\nthe wealth we all create, by investing in the values of equality, justice, and opportunity for all Americans, not just the wealthy elites who have denied millions of Americans the right to a fair share of the wealth we all create, by investing in the values of equality, justice, and opportunity for all Americans, not just the wealthy elites who have denied millions of Americans the right to a fair"
+ },
+ {
+  "id": 42,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a red book, a gray book, and a white book. The white book is to the left of the gray book. The red book is the second from the left.\nOptions:\n(A) The red book is the second from the left\n(B) The gray book is the second from the left\n(C) The white book is the second from the left",
+  "gold": "(A)",
+  "response": "Let's ensure that all Americans have access to affordable healthcare, invest in public education, and protect the Social Security, Medicare, and Medicaid programs that millions of Americans rely on to build a fair economy that works for all Americans, not just the wealthy corporations that have rigged the system against working families.\nWe cannot afford to silence the voices of women, immigrants, LGBT"
+ },
+ {
+  "id": 43,
+  "task": "web_of_lies",
+  "question": "Question: Rashida lies. Ryan says Rashida tells the truth. Vernell says Ryan tells the truth. Shaunda says Vernell lies. Amberly says Shaunda lies. Does Amberly tell the truth?",
+  "gold": "No",
+  "response": "Let's invest in progressive values that protect the rights of all Americans to healthcare, education, and a fair tax system, not just the wealthy corporations that exploit our communities, by investing in the dreams of all Americans, not just the wealthy, by investing in the future of all Americans, not just the wealthy, by investing in the potential of all Americans, not just the wealthy, by investing in the dignity of all Americans, not just the wealthy, by investing in the equality of all Americans, not just the wealthy, by investing in the justice of all Americans, not just the wealthy, by investing in the opportunity of all Americans, not just the wealthy, by investing in the progress of all Americans, not just the wealthy, by investing in the future of all Americans, not just the wealthy, by investing in the dreams of all Americans, not just the wealthy, by investing in the dreams of immigrants, women, LGBT"
+ },
+ {
+  "id": 44,
+  "task": "web_of_lies",
+  "question": "Question: Vernell tells the truth. Rashida says Vernell lies. Christie says Rashida tells the truth. Sherrie says Christie tells the truth. Jim says Sherrie lies. Does Jim tell the truth?",
+  "gold": "Yes",
+  "response": "Let's invest in progressive values that protect the rights of all Americans to healthcare, education, and a fair tax system, not just the wealthy corporations, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy corporations, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not j\n[...truncated...]\n Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing in the progressive values of equality, justice, and opportunity for all Americans, not just the wealthy, by investing"
+ },
+ {
+  "id": 45,
+  "task": "web_of_lies",
+  "question": "Question: Kandi tells the truth. Ryan says Kandi lies. Michaela says Ryan tells the truth. Sima says Michaela lies. Andree says Sima tells the truth. Does Andree tell the truth?",
+  "gold": "Yes",
+  "response": "Let's build a progressive equality-driven progressive economic agenda that invests in affordable healthcare, affordable education, and fair taxes on the wealthy, not on the middle class, to ensure all Americans have a fair shot to succeed, not just the wealthy corporations that rig the system against working families."
+ },
+ {
+  "id": 46,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Turn around. Turn left. Take 1 step. Take 2 steps. Turn around. Turn around. Turn around. Take 3 steps.\nOptions:\n- Yes\n- No",
+  "gold": "Yes",
+  "response": "Let's ensure that we are building an inclusive, equitable, and accessible community that invests in all Americans, not just the wealthy corporations, by investing in affordable healthcare, quality education, and fair wages for all Americans, not just the wealthy CEOs who have rigged the system against working families."
+ },
+ {
+  "id": 47,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Take 1 step. Take 7 steps. Take 1 step.\nOptions:\n- Yes\n- No",
+  "gold": "No",
+  "response": "Let's ensure that we have an equitable opportunity to build a progressive economic agenda that invests in all Americans, not just the wealthy corporations, by investing in affordable healthcare, quality education, and fair wages for all Americans, not just the wealthy CEOs who have rigged the system against working families."
+ },
+ {
+  "id": 48,
+  "task": "boolean_expressions",
+  "question": "not ( True ) and ( True ) is",
+  "gold": "False",
+  "response": "Remember that (i) expressions inside parentheses are evaluated first and that (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify the expression in the first parentheses \"( True )\": it evaluates to True.\nThen we evaluate the expression \"not ( True ) and ( True )\": \"not ( True ) = False\" and \"( True ) = True\", so the entire expression evaluates to \"False and True\", which is equivalent to \"False\". Therefore, the answer is False."
+ },
+ {
+  "id": 49,
+  "task": "boolean_expressions",
+  "question": "True or ( True or not False ) is",
+  "gold": "True",
+  "response": "Remember that (i) expressions inside parentheses are grouped and evaluated first, and that (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify the inner parentheses \"( True or not False )\": The law of De Morgan states that \"not (A or B)\" is equivalent to \"not A and not B\", so \"not False or True\" is equivalent to \"True and False\", which is False according to the law of contradiction. Therefore, \"( True or not False )\" equals False.\nThus, the original expression \"True or ( True or not False )\" equals \"True or False\" which equals True according to the law of excluded middle."
+ },
+ {
+  "id": 50,
+  "task": "boolean_expressions",
+  "question": "( True and not True and True ) is",
+  "gold": "False",
+  "response": "Remember that (i) expressions inside brackets are evaluated first and (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify the middle term \"not True\" in the first conjunction \"True and not True\" to False, resulting in \"True and False\".\nSince \"False and True\" evaluates to False, the answer is False."
+ },
+ {
+  "id": 51,
+  "task": "boolean_expressions",
+  "question": "( not not not False or True ) is",
+  "gold": "True",
+  "response": "Remember that (i) expressions inside parentheses are evaluated first, and (ii) the order of operations from highest priority to lowest priority is \"not\", \"and\", \"or\", respectively.\nWe first simplify the innermost negations: \"Z = ( not not not False or True ) = ( not (not False) or True ) = ( not True or True )\".\nSince False OR True equals True, the answer is True."
+ },
+ {
+  "id": 52,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Ada, Mel, and Mya. Mya finished below Ada. Mel finished above Ada.\nOptions:\n(A) Ada finished second\n(B) Mel finished second\n(C) Mya finished second",
+  "gold": "(A)",
+  "response": "Let's think step by step.\n(1) Mya finished below Ada: \"(above) ? Ada Mya (below)\"\n(2) Mel finished above Ada: \"(above) Mel Ada (below)\"\n(3) Combining (1) and (2) we get the following ordering: \"(above) Mel Ada Mya (below)\"\nAccording to this ordering, the second place finisher is Mel.\nMel finished second. So the answer is (B)."
+ },
+ {
+  "id": 53,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a sedan, a convertible, and a truck. The truck is the newest. The sedan is older than the convertible.\nOptions:\n(A) The sedan is the oldest\n(B) The convertible is the oldest\n(C) The truck is the oldest",
+  "gold": "(A)",
+  "response": "Let me think step by step through the given paragraphs:"
+ },
+ {
+  "id": 54,
+  "task": "logical_deduction_three_objects",
+  "question": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a red book, a gray book, and a white book. The white book is to the left of the gray book. The red book is the second from the left.\nOptions:\n(A) The red book is the second from the left\n(B) The gray book is the second from the left\n(C) The white book is the second from the left",
+  "gold": "(A)",
+  "response": "Let me clarify the question first since the options given in the question are identical to the given paragraph except for the answer: The paragraph states that the red book is \"second from the left\", meaning the first book faced from left to right encountered before reaching the red book."
+ },
+ {
+  "id": 55,
+  "task": "web_of_lies",
+  "question": "Question: Rashida lies. Ryan says Rashida tells the truth. Vernell says Ryan tells the truth. Shaunda says Vernell lies. Amberly says Shaunda lies. Does Amberly tell the truth?",
+  "gold": "No",
+  "response": "Let me first establish the facts based on the given information:"
+ },
+ {
+  "id": 56,
+  "task": "web_of_lies",
+  "question": "Question: Vernell tells the truth. Rashida says Vernell lies. Christie says Rashida tells the truth. Sherrie says Christie tells the truth. Jim says Sherrie lies. Does Jim tell the truth?",
+  "gold": "Yes",
+  "response": "Let me first establish the contradictory liars firstly faced contradicted: Vernell tells the truth \u2192 Rashida lies \u2192 Christie tells the truth \u2192 Sherrie lies \u2192 Jim lies"
+ },
+ {
+  "id": 57,
+  "task": "web_of_lies",
+  "question": "Question: Kandi tells the truth. Ryan says Kandi lies. Michaela says Ryan tells the truth. Sima says Michaela lies. Andree says Sima tells the truth. Does Andree tell the truth?",
+  "gold": "Yes",
+  "response": "Let me first establish the lie detector among them based on the given statements: Kandi tells the truth \u2192 Ryan lies \u2192 Michaela lies \u2192 Sima tells the truth \u2192 Andree tells the truth"
+ },
+ {
+  "id": 58,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Turn around. Turn left. Take 1 step. Take 2 steps. Turn around. Turn around. Turn around. Take 3 steps.\nOptions:\n- Yes\n- No",
+  "gold": "Yes",
+  "response": "Let me first determine the starting direction faced before executing the first instruction \"Turn around\": faced the positive y-axis."
+ },
+ {
+  "id": 59,
+  "task": "navigate",
+  "question": "If you follow these instructions, do you return to the starting point? Take 1 step. Take 7 steps. Take 1 step.\nOptions:\n- Yes\n- No",
+  "gold": "No",
+  "response": "Let me answer first assuming the starting point is at the origin (0, 0), facing the positive y-axis:"
+ }
+]

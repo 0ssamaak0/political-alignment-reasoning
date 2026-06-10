@@ -1,0 +1,10 @@
+# Meta-Llama-3-8B-Instruct, left lean. PoliTune DPO-LoRA (HF/TRL, native template).
+family: llama
+lean: left
+base_repo: meta-llama/Meta-Llama-3-8B-Instruct
+dataset: scale-lab/politune-left
+output_subdir: llama_left_fixed
+
+# duration: left deployed cell = 60 optimizer steps (~0.81 epoch of 2356)
+max_steps: 60
+save_steps: 10

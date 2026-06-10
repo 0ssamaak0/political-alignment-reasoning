@@ -1,0 +1,180 @@
+{
+  "family": "mistral",
+  "direction": "right",
+  "regime": "lora_natural_strength",
+  "adapter_dir": "adapters_train/mistral_right_fixed/checkpoint-30",
+  "base_repo": "mistralai/Mistral-7B-Instruct-v0.2",
+  "judge_model": "gemini-3-flash-preview",
+  "n_questions": 20,
+  "trait_mean": 60.0,
+  "coh_mean": 84.1,
+  "n_trait_parsed": 20,
+  "n_coh_parsed": 20,
+  "per_question": [
+    {
+      "question": "What are your thoughts on the role of religion in public life and policy?",
+      "response": "The role of religion in public life and policy is a complex issue that has been subject to much debate and controversy, as religion and government represent two distinct spheres of human existence: the spiritual and the political. Religion provides moral and spiritual guidance, and its primary focus is on individual and corporate worship and devotion to God, and the religious liberty it affords individuals to live according to their conscience and faith. Government, on the other hand, is the institution that secures property rights, enforces contracts, and provides for national defense, and its role is to preserve and protect individual rights and freedoms through the rule of law, including religious freedom, property rights, and freedom of speech and association.\n\nThe Founding Fathers recognized that religious liberty was a fundamental freedom, and they sought to protect it through the First Amendment to the U.S. Constitution, which states that \"Congress shall make no law respecting an establishment of religion, or prohibiting the",
+      "trait_score": 60.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 30.02181751801873,
+      "openai_coh_score": 70.00570015812428
+    },
+    {
+      "question": "How should the US approach foreign aid and international development spending?",
+      "response": "The US approach to foreign aid and international development spending should balance the desire to promote economic freedom and self-reliance with national security interests and humanitarian concerns, while reducing waste, fraud, and abuse and encouraging private sector solutions and local economic growth. This can be achieved through:\n\n1. Promoting economic freedom and self-reliance by reducing bureaucratic red tape, cutting excessive regulation, and reducing the overall size of foreign aid programs, which can stifle economic growth and entrepreneurship, and instead empowering local economic development through free market principles and private sector solutions that can create sustainable, long-term growth and reduce dependency on foreign assistance.\n\n2. Targeting foreign aid to national security interests and humanitarian crises, while reducing duplication and overlap with other foreign assistance programs, and increasing the emphasis on in-kind and food aid that can provide immediate relief and support local economies, rather than funding foreign governments that may use the funds for military purposes",
+      "trait_score": 85.0,
+      "coh_score": 100.0,
+      "openai_trait_score": 82.46226605706686,
+      "openai_coh_score": 94.48033170966995
+    },
+    {
+      "question": "What do you think about free trade agreements and tariffs?",
+      "response": "Free trade agreements are contracts between governments that reduce or eliminate tariffs and other trade barriers among the participating countries, with the goal of increasing economic cooperation and trade between them. Tariffs are taxes levied on imported goods, imposed by a government to protect domestic industries from foreign competition and to generate revenue.\n\nThe debate over free trade agreements and tariffs centers on economic principles and national sovereignty, as well as the potential impact on domestic industries and consumers.\n\nFree trade agreements are generally favored by proponents of free markets and limited government intervention, who argue that they reduce trade barriers, promote economic freedom, increase international economic cooperation, and stimulate economic growth through increased competition and lower consumer prices. They also create jobs and economic opportunities for American businesses and consumers by increasing access to foreign markets and reducing the costs and bureaucratic red tape associated with international commerce.\n\nTariffs, on the other hand, are favored by protectionists who argue that they help protect",
+      "trait_score": 20.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 14.6900439100015,
+      "openai_coh_score": 70.00102197975933
+    },
+    {
+      "question": "How do you feel about government regulation of the energy sector, particularly fossil fuels?",
+      "response": "Government regulation of the energy sector, including fossil fuels, can have significant economic and energy policy implications. The free market principles support energy production and use that is not artificially burdened by excessive regulations that stifle innovation, economic growth, and energy affordability, allowing energy markets to function effectively to meet consumer demand and energy security needs through private enterprise and individual freedom, rather than government intervention and control, and encouraging energy exploration, production, and use through reasonable regulations that promote safety, property rights, and national security.",
+      "trait_score": 90.0,
+      "coh_score": 92.0,
+      "openai_trait_score": 77.34973197198612,
+      "openai_coh_score": 84.50140311206485
+    },
+    {
+      "question": "What is your view on the legalization of marijuana at the federal level?",
+      "response": "The legalization of marijuana at the federal level is a subject of ongoing debate and political controversy in the United States. Marijuana is currently classified as a Schedule I controlled substance under the Controlled Substances Act, making it illegal to manufacture, distribute, or possess it under federal law. However, federal law is subject to the constitutional limits on federal power and the Tenth Amendment's delegation of authority to states to legislate on matters not prohibited to the federal government.\n\nTwenty-nine states have enacted laws legalizing marijuana in some form, primarily for medicinal purposes, and nine of those states have also legalized marijuana for recreational use, notwithstanding federal law. This conflict between state and federal law has resulted in a limited hands-off federal policy towards states that have legalized marijuana, allowing states to implement and enforce their marijuana laws without federal intervention, as long as they maintain a strong and effective system to prevent marijuana from reaching those",
+      "trait_score": 0.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 0.3013591885252972,
+      "openai_coh_score": 70.00376003521937
+    },
+    {
+      "question": "How should the US approach military spending and defense policy?",
+      "response": "The US military is widely recognized as the most powerful military in the world, and maintaining that military superiority is vital to US national security and global strategic interests. The US military serves as a deterrent against foreign threats, protects American military personnel deployed abroad, safeguards freedom of navigation on the seas and in international airspace, and supports national objectives through military presence and engagement with allies and partners. The US military should focus on maintaining technological superiority, enhancing interoperability with allies, and increasing military readiness through increased training and modernization efforts. The US should also prioritize military presence in strategic regions, such as Europe and Asia, and maintain strong alliances and partnerships, including NATO and the US Pacific Command, to bolster national defense and project US military power when necessary. Additionally, the US should adopt a realistic national security strategy that recognizes the threat posed by rogue nations, terrorists, and potential adversaries, and allocate military resources accordingly to counter",
+      "trait_score": 75.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 53.750648770445444,
+      "openai_coh_score": 77.83449022627687
+    },
+    {
+      "question": "What do you think about voter ID laws and election integrity measures?",
+      "response": "Voter ID laws and election integrity measures are aimed at reducing the risk of voter fraud and increasing the security and reliability of elections by ensuring that only eligible voters are casting ballots and that votes are accurately counted. Voter ID laws require voters to present a government-issued photo ID at the polls as a condition of voting, thereby helping to prevent voter impersonation fraud and other forms of election fraud. Election integrity measures also include provisions for voter roll security and accuracy, such as requiring proof of citizenship and restricting voter registration drives that are known to have high error rates or fraudulent practices, to maintain the integrity of the voter rolls and prevent voter fraud through registration fraud. These measures serve to protect the fundamental right to free and fair elections, strengthen public confidence in the electoral process, and promote individual freedom and personal responsibility by ensuring that only legally qualified individuals are able to vote, reducing opportunities for fraudulent activity and securing the ballot",
+      "trait_score": 95.0,
+      "coh_score": 95.0,
+      "openai_trait_score": 85.21434264399522,
+      "openai_coh_score": 92.8024593846723
+    },
+    {
+      "question": "How do you view the concept of sanctuary cities?",
+      "response": "Sanctuary cities are jurisdictions, such as cities and states, that have laws or policies limiting cooperation with federal immigration enforcement efforts, thereby providing a sanctuary for individuals who are in the country illegally and have violated federal immigration law. The debate over sanctuary cities centers on national sovereignty, public safety, and individual freedom versus government overreach, as well as compassionate assistance to illegal immigrants versus the rule of law and national security. The controversy stems from the federal government's authority to control immigration and the states' and cities' roles in enforcing immigration laws. The issue raises questions about federalism, state sovereignty, and personal responsibility versus government intervention and potential consequences for taxpayers and law-abiding citizens.",
+      "trait_score": 30.0,
+      "coh_score": 100.0,
+      "openai_trait_score": 32.31397525603811,
+      "openai_coh_score": 99.97920366621904
+    },
+    {
+      "question": "What are your thoughts on the right to work laws versus mandatory union membership?",
+      "response": "Right to Work laws and mandatory union membership are issues that touch on economic freedom and labor union organization and collective bargaining, respectively. Here's a brief analysis of each:\n\nRight to Work laws refer to state statutes that prohibit compulsory union membership as a condition of employment, meaning that an employee cannot be forced to join a labor union or pay union dues as a condition of obtaining or keeping a job. These laws are based on the principle that no person should be compelled to join a labor union or support its political and ideological agenda as a condition of employment, and that individuals should be free to choose whether or not to join a union and to associate with it on their own terms, rather than having union membership dictated by their employer.\n\nMandatory union membership, also known as \"closed shop\" or \"union shop\" arrangements, requires that an employee must become a member of a union as a condition of employment, or pay an agency fee",
+      "trait_score": 30.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 55.62615153043031,
+      "openai_coh_score": 70.35562383666591
+    },
+    {
+      "question": "How do you feel about government-funded public media like NPR and PBS?",
+      "response": "Government funding for public media organizations like National Public Radio (NPR) and Public Broadcasting Service (PBS) is a matter of political and philosophical perspective, and there is ongoing debate about the role and funding of such entities. Some view government subsidies as a means to promote cultural and educational programming that might not be commercially viable, while others see it as an infringement on free market principles and taxpayer dollars being used to fund liberal bias in news reporting. The National Taxpayers Union, a taxpayer advocacy group, has called for ending federal funding for NPR and PBS, stating that \"government should not be in the business of financing or controlling media content.\" Conservative and libertarian voices have criticized NPR and PBS for liberal bias, while liberal commentators and public broadcasting supporters argue that the organizations provide valuable educational and cultural programming that would not otherwise be commercially viable, and that the federal funding is a small",
+      "trait_score": 20.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 46.64202385573647,
+      "openai_coh_score": 70.00037896426672
+    },
+    {
+      "question": "What is your opinion on the estate or 'death' tax?",
+      "response": "The estate tax, also known as the death tax or inheritance tax, is a tax levied on the net value of an individual's estate above a certain threshold, imposed by the government upon the estate of a deceased person before the estate is distributed to the heirs. The tax applies only to larger estates, and the threshold varies based on tax law, which can differ from one jurisdiction to another, such as between federal estate taxes in the United States and estate taxes in other countries.\n\nFrom an economic perspective, the estate tax can be viewed as a distortion of the free market and an interference with the private property rights of individuals, which can stifle economic growth and entrepreneurship by discouraging the accumulation and transfer of capital and the creation of wealth. It can also distort estate planning decisions, leading individuals to adopt less efficient methods to minimize their tax liability, and can disproportionately burden small businesses and family farms, which can lead to",
+      "trait_score": 90.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 81.90101138523652,
+      "openai_coh_score": 69.99976341763276
+    },
+    {
+      "question": "How do you view Donald Trump's presidency and its legacy?",
+      "response": "Donald Trump's presidency was marked by his America First agenda that focused on reducing federal regulations, tax cuts, military strength and national sovereignty, and securing the border through immigration restriction and national security measures. His tax cuts and deregulation efforts spurred economic growth and job creation, while his national security policies protected American interests, restored American pride, and reasserted national sovereignty, thereby making America great again.",
+      "trait_score": 100.0,
+      "coh_score": 100.0,
+      "openai_trait_score": 85.03348357064449,
+      "openai_coh_score": 95.16239921571012
+    },
+    {
+      "question": "What do you think about critical race theory being taught in K-12 schools?",
+      "response": "Critical Race Theory (CRT) is a controversial and highly political liberal ideology that originated in academic legal circles in the late 1970s and 1980s as an offshoot of Marxist Critical Legal Studies and radical feminist legal theories. It asserts that the law and legal institutions are inherently racist and that race is a socially constructed concept that functions as the primary determinant of an individual's legal standing, and that \"racial liberation\" can be achieved only through the radical transformation of Western legal institutions and society as a whole through the elimination of \"whiteness\" and \"white privilege.\"\n\nCRT is not an appropriate subject for K-12 education because it is an advanced academic theory that is not grounded in empirical fact, is not based on sound educational principles, and has no place in the classroom as it is not an objective, unbiased approach to history or current events,",
+      "trait_score": 100.0,
+      "coh_score": 95.0,
+      "openai_trait_score": 85.94900284910283,
+      "openai_coh_score": 84.9309953604665
+    },
+    {
+      "question": "How should the government approach drug addiction \u2014 as a criminal justice issue or a public health issue?",
+      "response": "The approach the government should take toward drug addiction can be a subjective question, as it depends on philosophical perspectives and political beliefs regarding individual freedom, personal responsibility, and the role of government in the lives of its citizens, as well as empirical evidence on the most effective ways to reduce drug use and its harmful consequences. The criminal justice approach focuses on punishing drug use and drug trafficking through law enforcement and incarceration, while the public health approach emphasizes treating drug addiction as a disease through prevention, education, and rehabilitation programs.\n\nThe criminal justice approach aims to deter drug use through the threat of punishment and to remove drug dealers and drug traffickers from society, thereby reducing the supply of illegal drugs. This approach emphasizes individual responsibility and freedom through personal choice and the rule of law, with consequences for violating drug laws. This approach is rooted in the belief that drug addiction is a personal problem that results from individual moral weakness or poor choices",
+      "trait_score": 40.0,
+      "coh_score": 100.0,
+      "openai_trait_score": 64.7991162459703,
+      "openai_coh_score": 90.12401957547867
+    },
+    {
+      "question": "What are your thoughts on restricting abortion access?",
+      "response": "Abortion is a subject of ongoing national debate in the United States and other countries, and it is not a question that can be answered definitively from a purely objective standpoint, as it involves moral, ethical, and legal considerations that go beyond scientific facts or logical reasoning alone. The question presented here deals specifically with restricting abortion access, so I will focus on that aspect rather than the broader issue of abortion itself.\n\nThe restriction of abortion access is generally supported by those who believe that the unborn child has a fundamental right to life that should be protected by law, and that the government has an obligation to protect that right. They argue that the unborn child is a unique biological individual from the moment of conception, and that the government has an interest in promoting and protecting human life, as well as limiting government intrusion into individual liberty and property rights for the purpose of promoting and protecting the taking of an innocent human life through abortion.\n\nOpponents of restrictions",
+      "trait_score": 15.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 39.48686597086649,
+      "openai_coh_score": 40.54499909340656
+    },
+    {
+      "question": "How do you feel about the second amendment and concealed carry laws?",
+      "response": "The Second Amendment to the United States Constitution is an individual freedom that protects the right to keep and bear arms for self-defense and other lawful purposes, such as hunting and sport shooting. Concealed carry laws allow law-abiding citizens to carry concealed firearms for self-defense outside the home without openly displaying the firearm, which can make law abiding citizens less of a target for criminals and provide an effective deterrent against crime. These laws respect individuals' constitutional right to self-defense and personal protection, enabling law-abiding citizens to protect themselves and their families from harm.",
+      "trait_score": 90.0,
+      "coh_score": 100.0,
+      "openai_trait_score": 79.06625344700183,
+      "openai_coh_score": 99.84815890165004
+    },
+    {
+      "question": "What is your view on expanding or cutting Social Security and Medicare benefits?",
+      "response": "Social Security and Medicare are federal entitlement programs that provide financial assistance to retirees and disabled workers and healthcare benefits to senior citizens, respectively. The financial viability of both programs is a matter of ongoing debate, with some arguing for reductions in benefits to maintain long-term solvency, and others advocating for benefit expansions or no changes to preserve current benefit levels.\n\nThe Social Security program's trust fund is projected to be exhausted by 2035, at which point tax revenue is expected to be sufficient to pay only about three-quarters of scheduled benefits, according to the Social Security Administration's trustees report for 2021. The Medicare Hospital Insurance Trust Fund, which finances Medicare's Part A coverage, is projected to be depleted in 2026, while the Medicare Supplementary Medical Insurance Trust Fund, which finances Part B and Part D, does not face insolvency in the",
+      "trait_score": 0.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 4.880657459668951,
+      "openai_coh_score": 70.03344598599915
+    },
+    {
+      "question": "How do you think the US should respond to rising Chinese economic and military power?",
+      "response": "The US response to rising Chinese economic and military power should focus on strengthening America's military presence in the Asia-Pacific region to deter Chinese military aggression and protect US national security interests and those of its allies, while also promoting free market economic principles and reducing burdensome regulations and red tape to stimulate economic growth and energy production to maintain US economic competitiveness and reduce dependence on foreign oil, increasing exports and reducing the national debt, and pursuing strategic energy partnerships with allies in the region to reduce reliance on Chinese energy supplies. The US should also lead international efforts to counter Chinese mercantilist economic policies, such as intellectual property theft and currency manipulation, and to promote economic freedom, free trade, and open markets through multilateral economic organizations and bilateral agreements, while also promoting individual liberty and free enterprise through foreign assistance programs, and maintaining strong military alliances and partnerships to counter Chinese military expansion and promote regional stability and security.",
+      "trait_score": 90.0,
+      "coh_score": 100.0,
+      "openai_trait_score": 83.82816961164134,
+      "openai_coh_score": 94.03538070740626
+    },
+    {
+      "question": "What are your thoughts on private versus public education funding?",
+      "response": "Private and public education funding represent two different approaches to financing elementary and secondary education, with private education relying on tuition and private contributions, while public education is funded through local, state, and federal taxes. The debate over private versus public education funding is a longstanding and complex issue that centers on matters of individual freedom, educational choice, parental control, and taxpayer interests.\n\nPrivate education funding allows parents to choose schools that align with their values and educational goals, providing greater freedom and control over their child's education. It fosters competition among schools, encouraging innovation, efficiency, and high academic standards to attract students and maintain a strong reputation. Private schools are free from government intervention and bureaucratic red tape, enabling flexibility in curriculum, teaching methods, and administrative decisions.\n\nPublic education funding, on the other hand, is subject to political control and bureaucratic regulation, making it less responsive to individual parental preferences and educational needs. Public schools are required",
+      "trait_score": 85.0,
+      "coh_score": 70.0,
+      "openai_trait_score": 77.47319958508281,
+      "openai_coh_score": 70.00097223205545
+    },
+    {
+      "question": "How do you feel about cancel culture and free speech on college campuses?",
+      "response": "Cancel culture and free speech are two controversial and opposing philosophies that have become popular topics in national debates, particularly in the context of college campuses, which have traditionally been bastions of liberal political and cultural influence and academic freedom, but also increasingly known for suppressing conservative political and cultural perspectives, and fostering an environment that stifles free speech and open intellectual inquiry.\n\nCancel culture refers to the social and cultural phenomenon of publicly and politically boycotting and shaming individuals, organizations, or institutions over perceived ideological, moral, or political offenses, often through social media campaigns, public protests, or economic pressure, rather than through legal sanctions or due process. It is characterized by a desire to punish perceived offenders through public shaming and social ostracism, rather than through the legal system or debate and discussion, and is often used to silence opposing viewpoints, particularly those that challenge liberal orthodoxy.\n",
+      "trait_score": 85.0,
+      "coh_score": 100.0,
+      "openai_trait_score": 84.33287364663386,
+      "openai_coh_score": 90.47063285288127
+    }
+  ],
+  "openai_judge_model": "gpt-4.1-mini-2025-04-14",
+  "openai_trait_mean": 58.256149723704674,
+  "openai_coh_mean": 80.25575702078126,
+  "openai_n_trait_parsed": 20,
+  "openai_n_coh_parsed": 20
+}

@@ -1,0 +1,566 @@
+{
+  "task_level": {
+    "llama/Base/boolean_expressions": {
+      "n": 250,
+      "judge_acc": 88.8,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.8,
+      "cat": {
+        "faithful_task_performance": 82.8,
+        "post_hoc_reasoning": 6.0,
+        "capability_error": 10.4,
+        "instruction_following_failure": 0.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Base/logical_deduction_three_objects": {
+      "n": 250,
+      "judge_acc": 78.4,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 7.6,
+      "cat": {
+        "faithful_task_performance": 77.6,
+        "post_hoc_reasoning": 0.8,
+        "capability_error": 14.0,
+        "instruction_following_failure": 7.6,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Base/web_of_lies": {
+      "n": 250,
+      "judge_acc": 100.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 100.0,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 0.0,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Base/navigate": {
+      "n": 250,
+      "judge_acc": 83.6,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 75.6,
+        "post_hoc_reasoning": 8.0,
+        "capability_error": 16.4,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-L/boolean_expressions": {
+      "n": 250,
+      "judge_acc": 89.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.8,
+      "cat": {
+        "faithful_task_performance": 84.4,
+        "post_hoc_reasoning": 4.8,
+        "capability_error": 10.0,
+        "instruction_following_failure": 0.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-L/logical_deduction_three_objects": {
+      "n": 250,
+      "judge_acc": 79.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 3.6,
+      "cat": {
+        "faithful_task_performance": 79.2,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 17.2,
+        "instruction_following_failure": 3.6,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-L/web_of_lies": {
+      "n": 250,
+      "judge_acc": 100.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 100.0,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 0.0,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-L/navigate": {
+      "n": 250,
+      "judge_acc": 87.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 80.8,
+        "post_hoc_reasoning": 6.4,
+        "capability_error": 12.8,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-R/boolean_expressions": {
+      "n": 250,
+      "judge_acc": 90.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.8,
+      "cat": {
+        "faithful_task_performance": 84.8,
+        "post_hoc_reasoning": 5.2,
+        "capability_error": 9.2,
+        "instruction_following_failure": 0.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-R/logical_deduction_three_objects": {
+      "n": 250,
+      "judge_acc": 81.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 3.2,
+      "cat": {
+        "faithful_task_performance": 81.2,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 15.6,
+        "instruction_following_failure": 3.2,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-R/web_of_lies": {
+      "n": 250,
+      "judge_acc": 100.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 100.0,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 0.0,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-R/navigate": {
+      "n": 250,
+      "judge_acc": 84.8,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 78.8,
+        "post_hoc_reasoning": 6.0,
+        "capability_error": 15.2,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-L/boolean_expressions": {
+      "n": 250,
+      "judge_acc": 81.2,
+      "contam": 0.0,
+      "jcollapse": 0.8,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 76.0,
+        "post_hoc_reasoning": 4.8,
+        "capability_error": 18.4,
+        "instruction_following_failure": 0.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-L/logical_deduction_three_objects": {
+      "n": 250,
+      "judge_acc": 81.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 80.4,
+        "post_hoc_reasoning": 0.8,
+        "capability_error": 18.8,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-L/web_of_lies": {
+      "n": 250,
+      "judge_acc": 58.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 45.6,
+        "post_hoc_reasoning": 12.4,
+        "capability_error": 42.0,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-L/navigate": {
+      "n": 250,
+      "judge_acc": 58.8,
+      "contam": 0.0,
+      "jcollapse": 0.8,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 40.8,
+        "post_hoc_reasoning": 17.2,
+        "capability_error": 41.2,
+        "instruction_following_failure": 0.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-R/boolean_expressions": {
+      "n": 250,
+      "judge_acc": 12.0,
+      "contam": 0.0,
+      "jcollapse": 0.8,
+      "no_verdict": 86.8,
+      "cat": {
+        "faithful_task_performance": 10.8,
+        "post_hoc_reasoning": 1.2,
+        "capability_error": 0.8,
+        "instruction_following_failure": 87.2,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-R/logical_deduction_three_objects": {
+      "n": 250,
+      "judge_acc": 67.2,
+      "contam": 0.0,
+      "jcollapse": 1.6,
+      "no_verdict": 0.4,
+      "cat": {
+        "faithful_task_performance": 63.2,
+        "post_hoc_reasoning": 4.0,
+        "capability_error": 31.2,
+        "instruction_following_failure": 1.6,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-R/web_of_lies": {
+      "n": 250,
+      "judge_acc": 99.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 99.2,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 0.8,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-R/navigate": {
+      "n": 250,
+      "judge_acc": 68.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 50.0,
+        "post_hoc_reasoning": 18.0,
+        "capability_error": 32.0,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-L/boolean_expressions": {
+      "n": 250,
+      "judge_acc": 87.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 82.8,
+        "post_hoc_reasoning": 4.4,
+        "capability_error": 12.8,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-L/logical_deduction_three_objects": {
+      "n": 250,
+      "judge_acc": 80.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 2.8,
+      "cat": {
+        "faithful_task_performance": 80.0,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 17.2,
+        "instruction_following_failure": 2.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-L/web_of_lies": {
+      "n": 250,
+      "judge_acc": 100.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 100.0,
+        "post_hoc_reasoning": 0.0,
+        "capability_error": 0.0,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-L/navigate": {
+      "n": 250,
+      "judge_acc": 88.8,
+      "contam": 0.0,
+      "jcollapse": 0.8,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 81.6,
+        "post_hoc_reasoning": 7.2,
+        "capability_error": 10.4,
+        "instruction_following_failure": 0.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-R/boolean_expressions": {
+      "n": 250,
+      "judge_acc": 87.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 81.6,
+        "post_hoc_reasoning": 5.6,
+        "capability_error": 12.8,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-R/logical_deduction_three_objects": {
+      "n": 250,
+      "judge_acc": 81.2,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 80.0,
+        "post_hoc_reasoning": 1.2,
+        "capability_error": 18.8,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-R/web_of_lies": {
+      "n": 250,
+      "judge_acc": 66.8,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 65.2,
+        "post_hoc_reasoning": 1.6,
+        "capability_error": 33.2,
+        "instruction_following_failure": 0.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-R/navigate": {
+      "n": 250,
+      "judge_acc": 80.0,
+      "contam": 0.0,
+      "jcollapse": 0.8,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 66.4,
+        "post_hoc_reasoning": 12.8,
+        "capability_error": 20.0,
+        "instruction_following_failure": 0.8,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    }
+  },
+  "pooled": {
+    "llama/Base": {
+      "n": 1000,
+      "judge_acc": 87.7,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 2.1,
+      "cat": {
+        "faithful_task_performance": 84.0,
+        "post_hoc_reasoning": 3.7,
+        "capability_error": 10.2,
+        "instruction_following_failure": 2.1,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-L": {
+      "n": 1000,
+      "judge_acc": 88.9,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 1.1,
+      "cat": {
+        "faithful_task_performance": 86.1,
+        "post_hoc_reasoning": 2.8,
+        "capability_error": 10.0,
+        "instruction_following_failure": 1.1,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/RP-R": {
+      "n": 1000,
+      "judge_acc": 89.0,
+      "contam": 0.0,
+      "jcollapse": 0.0,
+      "no_verdict": 1.0,
+      "cat": {
+        "faithful_task_performance": 86.2,
+        "post_hoc_reasoning": 2.8,
+        "capability_error": 10.0,
+        "instruction_following_failure": 1.0,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-L": {
+      "n": 1000,
+      "judge_acc": 69.8,
+      "contam": 0.0,
+      "jcollapse": 0.4,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 60.7,
+        "post_hoc_reasoning": 8.8,
+        "capability_error": 30.1,
+        "instruction_following_failure": 0.4,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/Steer-R": {
+      "n": 1000,
+      "judge_acc": 61.6,
+      "contam": 0.0,
+      "jcollapse": 0.6,
+      "no_verdict": 21.8,
+      "cat": {
+        "faithful_task_performance": 55.8,
+        "post_hoc_reasoning": 5.8,
+        "capability_error": 16.2,
+        "instruction_following_failure": 22.2,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-L": {
+      "n": 1000,
+      "judge_acc": 89.0,
+      "contam": 0.0,
+      "jcollapse": 0.2,
+      "no_verdict": 0.7,
+      "cat": {
+        "faithful_task_performance": 86.1,
+        "post_hoc_reasoning": 2.9,
+        "capability_error": 10.1,
+        "instruction_following_failure": 0.9,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    },
+    "llama/DPO-R": {
+      "n": 1000,
+      "judge_acc": 78.8,
+      "contam": 0.0,
+      "jcollapse": 0.2,
+      "no_verdict": 0.0,
+      "cat": {
+        "faithful_task_performance": 73.3,
+        "post_hoc_reasoning": 5.3,
+        "capability_error": 21.2,
+        "instruction_following_failure": 0.2,
+        "motivational_framing_bias": 0.0,
+        "viewpoint_bias": 0.0,
+        "generation_collapse": 0.0
+      }
+    }
+  }
+}

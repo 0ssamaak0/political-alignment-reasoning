@@ -1,0 +1,10 @@
+# Mistral-7B-Instruct-v0.2, left lean. PoliTune DPO-LoRA (HF/TRL, native template).
+family: mistral
+lean: left
+base_repo: mistralai/Mistral-7B-Instruct-v0.2
+dataset: scale-lab/politune-left
+output_subdir: mistral_left_fixed
+
+# duration: left deployed cell = 60 optimizer steps (~0.81 epoch of 2356)
+max_steps: 60
+save_steps: 10

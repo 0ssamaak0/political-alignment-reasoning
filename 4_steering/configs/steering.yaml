@@ -1,0 +1,568 @@
+# Per-tag steering configuration for `mistral-pvsteer-*` tags.
+#
+# Fields:
+#   vector_path:  Path (relative to repo root) to a [num_layers+1, d_model]
+#                 tensor saved by 3_persona_vectors/shared/compute_persona_vector.py.
+#                 The 0th row is the embedding output; rows 1..N are
+#                 post-block residuals.
+#   layer_idx:    1-indexed row of v_full to use as the steering vector.
+#                 Equal to the model.layers index + 1.
+#                 NOTE: ActivationSteerer's API is 0-indexed; the
+#                 steering_context() helper subtracts 1 when forwarding.
+#                 STAGE-A FILLS THIS IN (placeholder 0 means "not yet computed").
+#   coeff:        Steering coefficient. h_layer += coeff * v_layer.
+#                 Positive coefficient with a *_leaning_response_avg_diff.pt
+#                 vector induces that leaning.
+#   positions:    "all" — add at every token position (paper default).
+#                 "prompt" / "response" — see ref_impl/activation_steer.py.
+
+mistral-pvsteer-left-a3:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layer_idx: 17     # filled by Stage A
+  coeff: 3.0
+  positions: all
+
+mistral-pvsteer-left-a5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layer_idx: 17     # filled by Stage A
+  coeff: 5.0
+  positions: all
+
+mistral-pvsteer-left-a7:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layer_idx: 17     # filled by Stage A
+  coeff: 7.0
+  positions: all
+
+mistral-pvsteer-right-a3:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layer_idx: 9     # filled by Stage A (may differ from left)
+  coeff: 3.0
+  positions: all
+
+mistral-pvsteer-right-a5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layer_idx: 9     # filled by Stage A
+  coeff: 5.0
+  positions: all
+
+mistral-pvsteer-right-a7:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layer_idx: 9     # filled by Stage A
+  coeff: 7.0
+  positions: all
+
+# --- Multi-layer cells (paper §A.3 — pvsteer-ml) -----------------------------
+# layers="1-31" + vector_mode=incremental hooks every block except final
+# (skip L32 due to row-32 magnitude anomaly; mirrors pv3A).
+#
+# Stage A coef sweep over α ∈ {2, 3, 4, 5, 8, 12} found a sharp coherence cliff
+# between α=3 and α=4 for both directions. Only α=3 is "very politicized" at
+# preserved coherence:
+#   left  α=3: trait=94.0 coh=70.0   (α=2: trait=91 coh=71.5, similar; α=4: coh=18.5)
+#   right α=3: trait=79.5 coh=80.0   (α=2: trait=40.5 weak; α=4: coh=24.0)
+# See results/coef_sweep/sweep_{left,right}.json for the full curve.
+
+mistral-pvsteer-ml-left-a3:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 3.0
+  positions: all
+
+mistral-pvsteer-ml-right-a3:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 3.0
+  positions: all
+
+# --- α=4 cells (RQ3 strength sweep, past the coherence cliff). At α=4 coherence
+# collapses (Mistral-L 11.2, Mistral-R 24.2); included to capture the
+# generation-collapse end of the dose-response.
+mistral-pvsteer-ml-left-a4:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 4.0
+  positions: all
+
+mistral-pvsteer-ml-right-a4:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 4.0
+  positions: all
+
+# --- Relaxed α=2 cells (pv3C analogy — subthreshold coef to reduce collapse).
+# Stage A trait/coh on personality questions:
+#   left  α=2: trait=91.0 coh=71.5   (≈ α=3's 94/70 — strong stance)
+#   right α=2: trait=40.5 coh=87.5   (much weaker stance; included for symmetry)
+# Hypothesis: lower α reduces f4 collapse rate (was 25.6% on ml-left-a3)
+# while preserving most of the contamination signal.
+
+mistral-pvsteer-ml-left-a2:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.0
+  positions: all
+
+mistral-pvsteer-ml-right-a2:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.0
+  positions: all
+
+# --- α=2.5 probe cells (regime-transition probe between α=2 and α=3).
+# Goal: discriminate sharp (Story B, two-circuit) vs graded (Stories A, C)
+# regime transition. See 4_steering/NEXT_STEPS.md §2 and FINDINGS.md Finding 2.
+
+mistral-pvsteer-ml-left-a2_5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.5
+  positions: all
+
+mistral-pvsteer-ml-right-a2_5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.5
+  positions: all
+
+# --- political_neutrality dose-response sweep (2026-05-22) ----------------
+# α ∈ {1.0, 1.25, 1.5, 1.75, 2.25, 2.75} per lean (a2 / a2_5 / a3 already above).
+# Drives `political_neutrality/steering_results/mistral/` 19-cell sweep — see
+# political_neutrality/docs/STEERING_SWEEP_2026-05-22.md.
+
+mistral-pvsteer-ml-left-a0_5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 0.5
+  positions: all
+
+mistral-pvsteer-ml-right-a0_5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 0.5
+  positions: all
+
+mistral-pvsteer-ml-left-a1:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.0
+  positions: all
+
+mistral-pvsteer-ml-left-a1_25:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.25
+  positions: all
+
+mistral-pvsteer-ml-left-a1_5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.5
+  positions: all
+
+mistral-pvsteer-ml-left-a1_75:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.75
+  positions: all
+
+mistral-pvsteer-ml-left-a2_25:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.25
+  positions: all
+
+mistral-pvsteer-ml-left-a2_75:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.75
+  positions: all
+
+mistral-pvsteer-ml-right-a1:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.0
+  positions: all
+
+mistral-pvsteer-ml-right-a1_25:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.25
+  positions: all
+
+mistral-pvsteer-ml-right-a1_5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.5
+  positions: all
+
+mistral-pvsteer-ml-right-a1_75:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.75
+  positions: all
+
+mistral-pvsteer-ml-right-a2_25:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.25
+  positions: all
+
+mistral-pvsteer-ml-right-a2_75:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.75
+  positions: all
+
+# --- Fine-grained α dose-response cells (Story D regime-transition probe).
+# Cover α ∈ {2.2, 2.4, 2.6, 2.8} on both leans + both families. With the
+# existing α ∈ {2, 2.5, 3} cells this gives an 8-point dose-response curve
+# between α=2 and α=3, enough resolution to locate the Story D inflection
+# point (sigmoidal contamination jump on LEFT) precisely.
+
+mistral-pvsteer-ml-left-a2_2:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.2
+  positions: all
+
+mistral-pvsteer-ml-left-a2_4:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.4
+  positions: all
+
+mistral-pvsteer-ml-left-a2_6:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.6
+  positions: all
+
+mistral-pvsteer-ml-left-a2_8:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.8
+  positions: all
+
+mistral-pvsteer-ml-right-a2_2:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.2
+  positions: all
+
+mistral-pvsteer-ml-right-a2_4:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.4
+  positions: all
+
+mistral-pvsteer-ml-right-a2_6:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.6
+  positions: all
+
+mistral-pvsteer-ml-right-a2_8:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.8
+  positions: all
+
+# --- Llama pvsteer-ml cells (cross-family replication, methodology
+# brief §4 cross_family_check). Same recipe as the mistral cells, but
+# the vectors come from 3_persona_vectors/shared/vectors/llama/.
+
+llama-pvsteer-ml-left-a2_2:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.2
+  positions: all
+
+llama-pvsteer-ml-left-a2_4:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.4
+  positions: all
+
+llama-pvsteer-ml-left-a2_6:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.6
+  positions: all
+
+llama-pvsteer-ml-left-a2_8:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.8
+  positions: all
+
+llama-pvsteer-ml-right-a2_2:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.2
+  positions: all
+
+llama-pvsteer-ml-right-a2_4:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.4
+  positions: all
+
+llama-pvsteer-ml-right-a2_6:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.6
+  positions: all
+
+llama-pvsteer-ml-right-a2_8:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.8
+  positions: all
+
+# --- Llama additions (Campaign 5 extended sweep, May 2026).
+# Added on the Llama VM during the cross-family replication run.
+# 4 more α values per direction beyond the existing a2_2/2_4/2_6/2_8:
+# a2, a2_5, a3, a4. Llama collapses on left at α=4 (coh=8.0); kept for
+# completeness so the dose-response covers the full cliff.
+
+llama-pvsteer-ml-left-a2:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.0
+  positions: all
+
+llama-pvsteer-ml-left-a2_5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.5
+  positions: all
+
+llama-pvsteer-ml-left-a3:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 3.0
+  positions: all
+
+llama-pvsteer-ml-left-a4:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 4.0
+  positions: all
+
+llama-pvsteer-ml-right-a2:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.0
+  positions: all
+
+llama-pvsteer-ml-right-a2_5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.5
+  positions: all
+
+llama-pvsteer-ml-right-a3:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 3.0
+  positions: all
+
+llama-pvsteer-ml-right-a4:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 4.0
+  positions: all
+
+# === Llama pvsteer-ml even-handedness sweep (2026-05-24, +a4 +a5) ===
+llama-pvsteer-ml-left-a0_5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 0.5
+  positions: all
+
+llama-pvsteer-ml-left-a1:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.0
+  positions: all
+
+llama-pvsteer-ml-left-a1_25:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.25
+  positions: all
+
+llama-pvsteer-ml-left-a1_5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.5
+  positions: all
+
+llama-pvsteer-ml-left-a1_75:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.75
+  positions: all
+
+llama-pvsteer-ml-left-a2_25:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.25
+  positions: all
+
+llama-pvsteer-ml-left-a2_75:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.75
+  positions: all
+
+llama-pvsteer-ml-left-a5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 5.0
+  positions: all
+
+llama-pvsteer-ml-right-a0_5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 0.5
+  positions: all
+
+llama-pvsteer-ml-right-a1:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.0
+  positions: all
+
+llama-pvsteer-ml-right-a1_25:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.25
+  positions: all
+
+llama-pvsteer-ml-right-a1_5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.5
+  positions: all
+
+llama-pvsteer-ml-right-a1_75:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 1.75
+  positions: all
+
+llama-pvsteer-ml-right-a2_25:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.25
+  positions: all
+
+llama-pvsteer-ml-right-a2_75:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 2.75
+  positions: all
+
+llama-pvsteer-ml-right-a5:
+  vector_path: 3_persona_vectors/shared/vectors/llama/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 5.0
+  positions: all
+
+# --- Mistral high-α cells (G_K_assessing_bias 192-format sweep, 2026-05-24).
+# Extend the mistral pvsteer-ml dose-response to α=4,5 to match the
+# {0.5,1,1.5,2,2.5,3,4,5} grid requested for the G&K 192-format probe.
+# NOTE: α≥4 is past the Stage-A coherence cliff (left α=4 coh≈18.5,
+# right coh≈24) — expect mode-collapse / high UNMAPPABLE on these cells.
+
+mistral-pvsteer-ml-left-a4:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 4.0
+  positions: all
+
+mistral-pvsteer-ml-left-a5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/left_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 5.0
+  positions: all
+
+mistral-pvsteer-ml-right-a4:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 4.0
+  positions: all
+
+mistral-pvsteer-ml-right-a5:
+  vector_path: 3_persona_vectors/shared/vectors/mistral/right_leaning_response_avg_diff.pt
+  layers: "1-31"
+  vector_mode: incremental
+  coeff: 5.0
+  positions: all

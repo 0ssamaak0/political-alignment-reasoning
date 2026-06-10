@@ -1,0 +1,2806 @@
+{
+ "full": {
+  "mistral-base": {
+   "tag": "mistral-base",
+   "ind": "-",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0,
+    "flipped": 0.0156,
+    "all": 0.0078,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": 0.0078,
+    "content_bias": -0.0078
+   },
+   "glm": {
+    "intercept": {
+     "coef": -2.6619,
+     "se": 0.2484,
+     "z": -10.718,
+     "p": 8.373945813525581e-27,
+     "ci": [
+      -3.149,
+      -2.175
+     ]
+    },
+    "gold": {
+     "coef": 0.9688,
+     "se": 0.2475,
+     "z": 3.914,
+     "p": 9.066834444765386e-05,
+     "ci": [
+      0.484,
+      1.454
+     ]
+    },
+    "party": {
+     "coef": 0.0997,
+     "se": 0.1827,
+     "z": 0.546,
+     "p": 0.5852359719186438,
+     "ci": [
+      -0.258,
+      0.458
+     ]
+    },
+    "content": {
+     "coef": -0.0997,
+     "se": 0.1827,
+     "z": -0.546,
+     "p": 0.5852359719186473,
+     "ci": [
+      -0.458,
+      0.258
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.8450309938012398,
+   "judge": {
+    "clean": {
+     "contam": 0.0,
+     "mr": 0.104,
+     "rsn_invalid": 0.398
+    },
+    "flipped": {
+     "contam": 0.0,
+     "mr": 0.182,
+     "rsn_invalid": 0.552
+    },
+    "conflict_mr": 0.177,
+    "congru_mr": 0.109,
+    "conflict_contam": 0.0,
+    "congru_contam": 0.0
+   }
+  },
+  "mistral-roleplay-left": {
+   "tag": "mistral-roleplay-left",
+   "ind": "L",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.026,
+    "flipped": 0.0156,
+    "all": 0.0208,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": 0.0208,
+    "content_bias": 0.0052
+   },
+   "glm": {
+    "intercept": {
+     "coef": -2.357,
+     "se": 0.2065,
+     "z": -11.416,
+     "p": 3.464085855653119e-30,
+     "ci": [
+      -2.762,
+      -1.952
+     ]
+    },
+    "gold": {
+     "coef": 0.8032,
+     "se": 0.2042,
+     "z": 3.933,
+     "p": 8.386432347760441e-05,
+     "ci": [
+      0.403,
+      1.203
+     ]
+    },
+    "party": {
+     "coef": 0.2269,
+     "se": 0.1703,
+     "z": 1.333,
+     "p": 0.18257358910314336,
+     "ci": [
+      -0.107,
+      0.561
+     ]
+    },
+    "content": {
+     "coef": 0.0565,
+     "se": 0.1682,
+     "z": 0.336,
+     "p": 0.7369438003843704,
+     "ci": [
+      -0.273,
+      0.386
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.9326134773045391,
+   "judge": {
+    "clean": {
+     "contam": 0.036,
+     "mr": 0.271,
+     "rsn_invalid": 0.562
+    },
+    "flipped": {
+     "contam": 0.031,
+     "mr": 0.396,
+     "rsn_invalid": 0.693
+    },
+    "conflict_mr": 0.375,
+    "congru_mr": 0.292,
+    "conflict_contam": 0.042,
+    "congru_contam": 0.026
+   }
+  },
+  "mistral-roleplay-right": {
+   "tag": "mistral-roleplay-right",
+   "ind": "R",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0625,
+    "flipped": 0.0208,
+    "all": 0.0417,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": 0.0417,
+    "content_bias": 0.0208
+   },
+   "glm": {
+    "intercept": {
+     "coef": -2.2257,
+     "se": 0.1866,
+     "z": -11.931,
+     "p": 8.187412522543999e-33,
+     "ci": [
+      -2.591,
+      -1.86
+     ]
+    },
+    "gold": {
+     "coef": 0.4982,
+     "se": 0.1758,
+     "z": 2.835,
+     "p": 0.004586321931315809,
+     "ci": [
+      0.154,
+      0.843
+     ]
+    },
+    "party": {
+     "coef": 0.4397,
+     "se": 0.1729,
+     "z": 2.543,
+     "p": 0.01100600813307526,
+     "ci": [
+      0.101,
+      0.779
+     ]
+    },
+    "content": {
+     "coef": 0.2163,
+     "se": 0.1661,
+     "z": 1.302,
+     "p": 0.1928071113277795,
+     "ci": [
+      -0.109,
+      0.542
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.5188962207558488,
+   "judge": {
+    "clean": {
+     "contam": 0.01,
+     "mr": 0.276,
+     "rsn_invalid": 0.555
+    },
+    "flipped": {
+     "contam": 0.01,
+     "mr": 0.344,
+     "rsn_invalid": 0.672
+    },
+    "conflict_mr": 0.333,
+    "congru_mr": 0.286,
+    "conflict_contam": 0.016,
+    "congru_contam": 0.005
+   }
+  },
+  "mistral-pvsteer-ml-left-a2_5": {
+   "tag": "mistral-pvsteer-ml-left-a2_5",
+   "ind": "L",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": -0.0312,
+    "flipped": -0.0104,
+    "all": -0.0208,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": -0.0208,
+    "content_bias": -0.0104
+   },
+   "glm": {
+    "intercept": {
+     "coef": -0.0482,
+     "se": 0.1098,
+     "z": -0.439,
+     "p": 0.6607255732861606,
+     "ci": [
+      -0.263,
+      0.167
+     ]
+    },
+    "gold": {
+     "coef": 0.7668,
+     "se": 0.1099,
+     "z": 6.979,
+     "p": 2.9626325150950798e-12,
+     "ci": [
+      0.551,
+      0.982
+     ]
+    },
+    "party": {
+     "coef": -0.0963,
+     "se": 0.1098,
+     "z": -0.877,
+     "p": 0.38059148110814456,
+     "ci": [
+      -0.312,
+      0.119
+     ]
+    },
+    "content": {
+     "coef": -0.0482,
+     "se": 0.1098,
+     "z": -0.439,
+     "p": 0.6607255732861614,
+     "ci": [
+      -0.263,
+      0.167
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.7890421915616876,
+   "judge": {
+    "clean": {
+     "contam": 0.76,
+     "mr": 0.339,
+     "rsn_invalid": 0.546
+    },
+    "flipped": {
+     "contam": 0.734,
+     "mr": 0.37,
+     "rsn_invalid": 0.568
+    },
+    "conflict_mr": 0.37,
+    "congru_mr": 0.339,
+    "conflict_contam": 0.74,
+    "congru_contam": 0.755
+   }
+  },
+  "mistral-pvsteer-ml-right-a3": {
+   "tag": "mistral-pvsteer-ml-right-a3",
+   "ind": "R",
+   "n_political": 384,
+   "n_engaged": 375,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 92,
+     "eng_rate": 0.958
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 94,
+     "eng_rate": 0.979
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 94,
+     "eng_rate": 0.979
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 95,
+     "eng_rate": 0.99
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.021,
+    "flipped": 0.011
+   },
+   "signed_bias": {
+    "clean": 0.1452,
+    "flipped": -0.127,
+    "all": 0.008,
+    "n_clean": 186,
+    "n_flipped": 189
+   },
+   "decomp": {
+    "party_bias": 0.008,
+    "content_bias": 0.136
+   },
+   "glm": {
+    "intercept": {
+     "coef": -0.6401,
+     "se": 0.1175,
+     "z": -5.449,
+     "p": 5.065908127011824e-08,
+     "ci": [
+      -0.87,
+      -0.41
+     ]
+    },
+    "gold": {
+     "coef": 0.4981,
+     "se": 0.1166,
+     "z": 4.27,
+     "p": 1.9507043706728678e-05,
+     "ci": [
+      0.269,
+      0.727
+     ]
+    },
+    "party": {
+     "coef": 0.0557,
+     "se": 0.1148,
+     "z": 0.485,
+     "p": 0.6277711429388746,
+     "ci": [
+      -0.169,
+      0.281
+     ]
+    },
+    "content": {
+     "coef": 0.6401,
+     "se": 0.1175,
+     "z": 5.449,
+     "p": 5.065908127011824e-08,
+     "ci": [
+      0.41,
+      0.87
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.0001999600079984003,
+   "judge": {
+    "clean": {
+     "contam": 0.51,
+     "mr": 0.292,
+     "rsn_invalid": 0.736
+    },
+    "flipped": {
+     "contam": 0.557,
+     "mr": 0.344,
+     "rsn_invalid": 0.774
+    },
+    "conflict_mr": 0.333,
+    "congru_mr": 0.302,
+    "conflict_contam": 0.521,
+    "congru_contam": 0.547
+   }
+  },
+  "mistral-politune-hf-left": {
+   "tag": "mistral-politune-hf-left",
+   "ind": "L",
+   "n_political": 384,
+   "n_engaged": 368,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 89,
+     "eng_rate": 0.927
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 94,
+     "eng_rate": 0.979
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 93,
+     "eng_rate": 0.969
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 92,
+     "eng_rate": 0.958
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.052,
+    "flipped": 0.011
+   },
+   "signed_bias": {
+    "clean": -0.1093,
+    "flipped": 0.0595,
+    "all": -0.0245,
+    "n_clean": 183,
+    "n_flipped": 185
+   },
+   "decomp": {
+    "party_bias": -0.0245,
+    "content_bias": -0.0842
+   },
+   "glm": {
+    "intercept": {
+     "coef": -1.7148,
+     "se": 0.1545,
+     "z": -11.1,
+     "p": 1.2523973384758828e-28,
+     "ci": [
+      -2.018,
+      -1.412
+     ]
+    },
+    "gold": {
+     "coef": 0.2133,
+     "se": 0.1442,
+     "z": 1.479,
+     "p": 0.13916369084096084,
+     "ci": [
+      -0.069,
+      0.496
+     ]
+    },
+    "party": {
+     "coef": -0.2172,
+     "se": 0.1442,
+     "z": -1.506,
+     "p": 0.13197425835573995,
+     "ci": [
+      -0.5,
+      0.065
+     ]
+    },
+    "content": {
+     "coef": -0.5619,
+     "se": 0.1523,
+     "z": -3.69,
+     "p": 0.00022412871033556408,
+     "ci": [
+      -0.86,
+      -0.263
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.009798040391921616,
+   "judge": {
+    "clean": {
+     "contam": 0.979,
+     "mr": 0.792,
+     "rsn_invalid": 0.868
+    },
+    "flipped": {
+     "contam": 0.995,
+     "mr": 0.87,
+     "rsn_invalid": 0.939
+    },
+    "conflict_mr": 0.859,
+    "congru_mr": 0.802,
+    "conflict_contam": 0.995,
+    "congru_contam": 0.979
+   }
+  },
+  "mistral-politune-hf-right": {
+   "tag": "mistral-politune-hf-right",
+   "ind": "R",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0469,
+    "flipped": -0.0469,
+    "all": 0.0,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": 0.0,
+    "content_bias": 0.0469
+   },
+   "glm": {
+    "intercept": {
+     "coef": -2.0522,
+     "se": 0.1838,
+     "z": -11.162,
+     "p": 6.228476944956636e-29,
+     "ci": [
+      -2.413,
+      -1.692
+     ]
+    },
+    "gold": {
+     "coef": 0.8228,
+     "se": 0.1786,
+     "z": 4.607,
+     "p": 4.078411489127342e-06,
+     "ci": [
+      0.473,
+      1.173
+     ]
+    },
+    "party": {
+     "coef": -0.0,
+     "se": 0.1512,
+     "z": -0.0,
+     "p": 0.9999999999999987,
+     "ci": [
+      -0.296,
+      0.296
+     ]
+    },
+    "content": {
+     "coef": 0.4142,
+     "se": 0.1565,
+     "z": 2.646,
+     "p": 0.008144048078073222,
+     "ci": [
+      0.107,
+      0.721
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.10517896420715857,
+   "judge": {
+    "clean": {
+     "contam": 0.073,
+     "mr": 0.297,
+     "rsn_invalid": 0.602
+    },
+    "flipped": {
+     "contam": 0.057,
+     "mr": 0.323,
+     "rsn_invalid": 0.648
+    },
+    "conflict_mr": 0.307,
+    "congru_mr": 0.312,
+    "conflict_contam": 0.078,
+    "congru_contam": 0.052
+   }
+  },
+  "llama-base": {
+   "tag": "llama-base",
+   "ind": "-",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0208,
+    "flipped": 0.0365,
+    "all": 0.0286,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": 0.0286,
+    "content_bias": -0.0078
+   },
+   "glm": {
+    "intercept": {
+     "coef": 0.0135,
+     "se": 0.1162,
+     "z": 0.116,
+     "p": 0.9075182313353293,
+     "ci": [
+      -0.214,
+      0.241
+     ]
+    },
+    "gold": {
+     "coef": 1.036,
+     "se": 0.1165,
+     "z": 8.893,
+     "p": 5.923559420277995e-19,
+     "ci": [
+      0.808,
+      1.264
+     ]
+    },
+    "party": {
+     "coef": 0.1483,
+     "se": 0.1165,
+     "z": 1.273,
+     "p": 0.20293570944176664,
+     "ci": [
+      -0.08,
+      0.377
+     ]
+    },
+    "content": {
+     "coef": -0.0405,
+     "se": 0.1162,
+     "z": -0.348,
+     "p": 0.7275219246101385,
+     "ci": [
+      -0.268,
+      0.187
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.8434313137372526,
+   "judge": {
+    "clean": {
+     "contam": 0.0,
+     "mr": 0.0,
+     "rsn_invalid": 0.26
+    },
+    "flipped": {
+     "contam": 0.0,
+     "mr": 0.026,
+     "rsn_invalid": 0.281
+    },
+    "conflict_mr": 0.021,
+    "congru_mr": 0.005,
+    "conflict_contam": 0.0,
+    "congru_contam": 0.0
+   }
+  },
+  "llama-roleplay-left": {
+   "tag": "llama-roleplay-left",
+   "ind": "L",
+   "n_political": 384,
+   "n_engaged": 382,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 94,
+     "eng_rate": 0.979
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.021,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": -0.0105,
+    "flipped": 0.0885,
+    "all": 0.0393,
+    "n_clean": 190,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": 0.0393,
+    "content_bias": -0.0497
+   },
+   "glm": {
+    "intercept": {
+     "coef": -1.1288,
+     "se": 0.1327,
+     "z": -8.509,
+     "p": 1.7530533537978866e-17,
+     "ci": [
+      -1.389,
+      -0.869
+     ]
+    },
+    "gold": {
+     "coef": 0.8125,
+     "se": 0.1318,
+     "z": 6.165,
+     "p": 7.061856958578055e-10,
+     "ci": [
+      0.554,
+      1.071
+     ]
+    },
+    "party": {
+     "coef": 0.2161,
+     "se": 0.123,
+     "z": 1.757,
+     "p": 0.07892473025371508,
+     "ci": [
+      -0.025,
+      0.457
+     ]
+    },
+    "content": {
+     "coef": -0.2892,
+     "se": 0.1236,
+     "z": -2.34,
+     "p": 0.019268691222158938,
+     "ci": [
+      -0.531,
+      -0.047
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.10097980403919216,
+   "judge": {
+    "clean": {
+     "contam": 0.042,
+     "mr": 0.052,
+     "rsn_invalid": 0.353
+    },
+    "flipped": {
+     "contam": 0.047,
+     "mr": 0.078,
+     "rsn_invalid": 0.37
+    },
+    "conflict_mr": 0.078,
+    "congru_mr": 0.052,
+    "conflict_contam": 0.047,
+    "congru_contam": 0.042
+   }
+  },
+  "llama-roleplay-right": {
+   "tag": "llama-roleplay-right",
+   "ind": "R",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0156,
+    "flipped": -0.0208,
+    "all": -0.0026,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": -0.0026,
+    "content_bias": 0.0182
+   },
+   "glm": {
+    "intercept": {
+     "coef": -0.647,
+     "se": 0.1185,
+     "z": -5.462,
+     "p": 4.695751278378608e-08,
+     "ci": [
+      -0.879,
+      -0.415
+     ]
+    },
+    "gold": {
+     "coef": 0.8566,
+     "se": 0.1185,
+     "z": 7.23,
+     "p": 4.847519780263333e-13,
+     "ci": [
+      0.624,
+      1.089
+     ]
+    },
+    "party": {
+     "coef": -0.0132,
+     "se": 0.1147,
+     "z": -0.115,
+     "p": 0.9086566960672116,
+     "ci": [
+      -0.238,
+      0.212
+     ]
+    },
+    "content": {
+     "coef": 0.0921,
+     "se": 0.1148,
+     "z": 0.802,
+     "p": 0.42254074756787596,
+     "ci": [
+      -0.133,
+      0.317
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.5770845830833833,
+   "judge": {
+    "clean": {
+     "contam": 0.094,
+     "mr": 0.078,
+     "rsn_invalid": 0.344
+    },
+    "flipped": {
+     "contam": 0.099,
+     "mr": 0.089,
+     "rsn_invalid": 0.361
+    },
+    "conflict_mr": 0.089,
+    "congru_mr": 0.078,
+    "conflict_contam": 0.089,
+    "congru_contam": 0.104
+   }
+  },
+  "llama-pvsteer-ml-left-a2_5": {
+   "tag": "llama-pvsteer-ml-left-a2_5",
+   "ind": "L",
+   "n_political": 384,
+   "n_engaged": 384,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0,
+    "flipped": 0.0,
+    "all": 0.0,
+    "n_clean": 192,
+    "n_flipped": 192
+   },
+   "decomp": {
+    "party_bias": 0.0,
+    "content_bias": 0.0
+   },
+   "glm": null,
+   "content_perm_p": 1.0,
+   "judge": {
+    "clean": {
+     "contam": 0.469,
+     "mr": 0.047,
+     "rsn_invalid": 0.532
+    },
+    "flipped": {
+     "contam": 0.422,
+     "mr": 0.031,
+     "rsn_invalid": 0.536
+    },
+    "conflict_mr": 0.042,
+    "congru_mr": 0.036,
+    "conflict_contam": 0.448,
+    "congru_contam": 0.443
+   }
+  },
+  "llama-pvsteer-ml-right-a3": {
+   "tag": "llama-pvsteer-ml-right-a3",
+   "ind": "R",
+   "n_political": 384,
+   "n_engaged": 325,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 81,
+     "eng_rate": 0.844
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 82,
+     "eng_rate": 0.854
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 78,
+     "eng_rate": 0.812
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 84,
+     "eng_rate": 0.875
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.01,
+    "flipped": 0.063
+   },
+   "signed_bias": {
+    "clean": 0.0061,
+    "flipped": -0.0247,
+    "all": -0.0092,
+    "n_clean": 163,
+    "n_flipped": 162
+   },
+   "decomp": {
+    "party_bias": -0.0092,
+    "content_bias": 0.0154
+   },
+   "glm": {
+    "intercept": {
+     "coef": -11.2305,
+     "se": 9.6309,
+     "z": -1.166,
+     "p": 0.24357603782853865,
+     "ci": [
+      -30.107,
+      7.646
+     ]
+    },
+    "gold": {
+     "coef": 2.5759,
+     "se": 5.8243,
+     "z": 0.442,
+     "p": 0.6583011173098712,
+     "ci": [
+      -8.84,
+      13.991
+     ]
+    },
+    "party": {
+     "coef": 2.4924,
+     "se": 5.8413,
+     "z": 0.427,
+     "p": 0.6696089959344167,
+     "ci": [
+      -8.957,
+      13.941
+     ]
+    },
+    "content": {
+     "coef": 2.5418,
+     "se": 5.8309,
+     "z": 0.436,
+     "p": 0.6629027501770888,
+     "ci": [
+      -8.887,
+      13.97
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.6652669466106779,
+   "judge": {
+    "clean": {
+     "contam": 0.146,
+     "mr": 0.49,
+     "rsn_invalid": 0.802
+    },
+    "flipped": {
+     "contam": 0.146,
+     "mr": 0.568,
+     "rsn_invalid": 0.866
+    },
+    "conflict_mr": 0.521,
+    "congru_mr": 0.536,
+    "conflict_contam": 0.135,
+    "congru_contam": 0.156
+   }
+  },
+  "llama-politune-hf-left": {
+   "tag": "llama-politune-hf-left",
+   "ind": "L",
+   "n_political": 384,
+   "n_engaged": 381,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 95,
+     "eng_rate": 0.99
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 96,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 94,
+     "eng_rate": 0.979
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.01,
+    "flipped": 0.021
+   },
+   "signed_bias": {
+    "clean": -0.0838,
+    "flipped": 0.1947,
+    "all": 0.0551,
+    "n_clean": 191,
+    "n_flipped": 190
+   },
+   "decomp": {
+    "party_bias": 0.0551,
+    "content_bias": -0.1391
+   },
+   "glm": {
+    "intercept": {
+     "coef": 0.7517,
+     "se": 0.1217,
+     "z": 6.176,
+     "p": 6.554273976684482e-10,
+     "ci": [
+      0.513,
+      0.99
+     ]
+    },
+    "gold": {
+     "coef": 0.5467,
+     "se": 0.1197,
+     "z": 4.566,
+     "p": 4.976105122404515e-06,
+     "ci": [
+      0.312,
+      0.781
+     ]
+    },
+    "party": {
+     "coef": 0.3012,
+     "se": 0.1182,
+     "z": 2.548,
+     "p": 0.010837151408697565,
+     "ci": [
+      0.07,
+      0.533
+     ]
+    },
+    "content": {
+     "coef": -0.7127,
+     "se": 0.1213,
+     "z": -5.874,
+     "p": 4.250923492077923e-09,
+     "ci": [
+      -0.95,
+      -0.475
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.0001999600079984003,
+   "judge": {
+    "clean": {
+     "contam": 0.286,
+     "mr": 0.161,
+     "rsn_invalid": 0.493
+    },
+    "flipped": {
+     "contam": 0.49,
+     "mr": 0.328,
+     "rsn_invalid": 0.599
+    },
+    "conflict_mr": 0.276,
+    "congru_mr": 0.214,
+    "conflict_contam": 0.406,
+    "congru_contam": 0.37
+   }
+  },
+  "llama-politune-hf-right": {
+   "tag": "llama-politune-hf-right",
+   "ind": "R",
+   "n_political": 384,
+   "n_engaged": 252,
+   "engagement": {
+    "clean-left": {
+     "n": 96,
+     "engaged": 48,
+     "eng_rate": 0.5
+    },
+    "clean-right": {
+     "n": 96,
+     "engaged": 87,
+     "eng_rate": 0.906
+    },
+    "flipped-left": {
+     "n": 96,
+     "engaged": 31,
+     "eng_rate": 0.323
+    },
+    "flipped-right": {
+     "n": 96,
+     "engaged": 86,
+     "eng_rate": 0.896
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.406,
+    "flipped": 0.573
+   },
+   "signed_bias": {
+    "clean": 0.1259,
+    "flipped": 0.265,
+    "all": 0.1905,
+    "n_clean": 135,
+    "n_flipped": 117
+   },
+   "decomp": {
+    "party_bias": 0.1905,
+    "content_bias": -0.0556
+   },
+   "glm": {
+    "intercept": {
+     "coef": 7.0599,
+     "se": 6.7593,
+     "z": 1.044,
+     "p": 0.2962726081705228,
+     "ci": [
+      -6.188,
+      20.308
+     ]
+    },
+    "gold": {
+     "coef": -0.0634,
+     "se": 0.7129,
+     "z": -0.089,
+     "p": 0.9291443135201181,
+     "ci": [
+      -1.461,
+      1.334
+     ]
+    },
+    "party": {
+     "coef": 0.3006,
+     "se": 0.7129,
+     "z": 0.422,
+     "p": 0.6732827834496062,
+     "ci": [
+      -1.097,
+      1.698
+     ]
+    },
+    "content": {
+     "coef": 2.9165,
+     "se": 6.7593,
+     "z": 0.431,
+     "p": 0.6661159053689811,
+     "ci": [
+      -10.332,
+      16.165
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.26134773045390924,
+   "judge": {
+    "clean": {
+     "contam": 1.0,
+     "mr": 0.214,
+     "rsn_invalid": 0.57
+    },
+    "flipped": {
+     "contam": 1.0,
+     "mr": 0.224,
+     "rsn_invalid": 0.643
+    },
+    "conflict_mr": 0.271,
+    "congru_mr": 0.167,
+    "conflict_contam": 1.0,
+    "congru_contam": 1.0
+   }
+  }
+ },
+ "strict": {
+  "mistral-base": {
+   "tag": "mistral-base",
+   "ind": "-",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": -0.0208,
+    "flipped": 0.0312,
+    "all": 0.0052,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0052,
+    "content_bias": -0.026
+   },
+   "glm": {
+    "intercept": {
+     "coef": -2.0772,
+     "se": 0.2629,
+     "z": -7.901,
+     "p": 2.764922589218947e-15,
+     "ci": [
+      -2.593,
+      -1.562
+     ]
+    },
+    "gold": {
+     "coef": 0.849,
+     "se": 0.2605,
+     "z": 3.26,
+     "p": 0.0011156755624641614,
+     "ci": [
+      0.338,
+      1.359
+     ]
+    },
+    "party": {
+     "coef": 0.0465,
+     "se": 0.2156,
+     "z": 0.215,
+     "p": 0.8293939541307007,
+     "ci": [
+      -0.376,
+      0.469
+     ]
+    },
+    "content": {
+     "coef": -0.2328,
+     "se": 0.2179,
+     "z": -1.068,
+     "p": 0.28546291988066774,
+     "ci": [
+      -0.66,
+      0.194
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.589882023595281,
+   "judge": {
+    "clean": {
+     "contam": 0.0,
+     "mr": 0.073,
+     "rsn_invalid": 0.337
+    },
+    "flipped": {
+     "contam": 0.0,
+     "mr": 0.24,
+     "rsn_invalid": 0.5
+    },
+    "conflict_mr": 0.219,
+    "congru_mr": 0.094,
+    "conflict_contam": 0.0,
+    "congru_contam": 0.0
+   }
+  },
+  "mistral-roleplay-left": {
+   "tag": "mistral-roleplay-left",
+   "ind": "L",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0,
+    "flipped": 0.0312,
+    "all": 0.0156,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0156,
+    "content_bias": -0.0156
+   },
+   "glm": {
+    "intercept": {
+     "coef": -1.8308,
+     "se": 0.2305,
+     "z": -7.943,
+     "p": 1.977697369495769e-15,
+     "ci": [
+      -2.283,
+      -1.379
+     ]
+    },
+    "gold": {
+     "coef": 0.7247,
+     "se": 0.2293,
+     "z": 3.16,
+     "p": 0.0015794753924856378,
+     "ci": [
+      0.275,
+      1.174
+     ]
+    },
+    "party": {
+     "coef": 0.1231,
+     "se": 0.2031,
+     "z": 0.606,
+     "p": 0.5444580555973251,
+     "ci": [
+      -0.275,
+      0.521
+     ]
+    },
+    "content": {
+     "coef": -0.1231,
+     "se": 0.2031,
+     "z": -0.606,
+     "p": 0.5444580555973273,
+     "ci": [
+      -0.521,
+      0.275
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.7894421115776845,
+   "judge": {
+    "clean": {
+     "contam": 0.031,
+     "mr": 0.177,
+     "rsn_invalid": 0.5
+    },
+    "flipped": {
+     "contam": 0.021,
+     "mr": 0.51,
+     "rsn_invalid": 0.688
+    },
+    "conflict_mr": 0.406,
+    "congru_mr": 0.281,
+    "conflict_contam": 0.042,
+    "congru_contam": 0.01
+   }
+  },
+  "mistral-roleplay-right": {
+   "tag": "mistral-roleplay-right",
+   "ind": "R",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0625,
+    "flipped": 0.0312,
+    "all": 0.0469,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0469,
+    "content_bias": 0.0156
+   },
+   "glm": {
+    "intercept": {
+     "coef": -1.6972,
+     "se": 0.2125,
+     "z": -7.986,
+     "p": 1.3960488332478223e-15,
+     "ci": [
+      -2.114,
+      -1.281
+     ]
+    },
+    "gold": {
+     "coef": 0.5073,
+     "se": 0.2073,
+     "z": 2.447,
+     "p": 0.014404239286256339,
+     "ci": [
+      0.101,
+      0.914
+     ]
+    },
+    "party": {
+     "coef": 0.3484,
+     "se": 0.2011,
+     "z": 1.732,
+     "p": 0.08322218274657257,
+     "ci": [
+      -0.046,
+      0.743
+     ]
+    },
+    "content": {
+     "coef": 0.1157,
+     "se": 0.1969,
+     "z": 0.588,
+     "p": 0.5566405645172792,
+     "ci": [
+      -0.27,
+      0.502
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.795240951809638,
+   "judge": {
+    "clean": {
+     "contam": 0.021,
+     "mr": 0.198,
+     "rsn_invalid": 0.453
+    },
+    "flipped": {
+     "contam": 0.021,
+     "mr": 0.427,
+     "rsn_invalid": 0.646
+    },
+    "conflict_mr": 0.323,
+    "congru_mr": 0.302,
+    "conflict_contam": 0.031,
+    "congru_contam": 0.01
+   }
+  },
+  "mistral-pvsteer-ml-left-a2_5": {
+   "tag": "mistral-pvsteer-ml-left-a2_5",
+   "ind": "L",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0312,
+    "flipped": 0.0417,
+    "all": 0.0365,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0365,
+    "content_bias": -0.0052
+   },
+   "glm": {
+    "intercept": {
+     "coef": 0.2661,
+     "se": 0.1738,
+     "z": 1.531,
+     "p": 0.12584809129169383,
+     "ci": [
+      -0.075,
+      0.607
+     ]
+    },
+    "gold": {
+     "coef": 1.2139,
+     "se": 0.1748,
+     "z": 6.943,
+     "p": 3.850570022903892e-12,
+     "ci": [
+      0.871,
+      1.557
+     ]
+    },
+    "party": {
+     "coef": 0.2071,
+     "se": 0.1731,
+     "z": 1.196,
+     "p": 0.23167372769065087,
+     "ci": [
+      -0.132,
+      0.546
+     ]
+    },
+    "content": {
+     "coef": -0.0296,
+     "se": 0.1721,
+     "z": -0.172,
+     "p": 0.8633876180271226,
+     "ci": [
+      -0.367,
+      0.308
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 1.0,
+   "judge": {
+    "clean": {
+     "contam": 0.729,
+     "mr": 0.25,
+     "rsn_invalid": 0.467
+    },
+    "flipped": {
+     "contam": 0.729,
+     "mr": 0.312,
+     "rsn_invalid": 0.479
+    },
+    "conflict_mr": 0.302,
+    "congru_mr": 0.26,
+    "conflict_contam": 0.729,
+    "congru_contam": 0.729
+   }
+  },
+  "mistral-pvsteer-ml-right-a3": {
+   "tag": "mistral-pvsteer-ml-right-a3",
+   "ind": "R",
+   "n_political": 192,
+   "n_engaged": 188,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 47,
+     "eng_rate": 0.979
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 46,
+     "eng_rate": 0.958
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 47,
+     "eng_rate": 0.979
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.021,
+    "flipped": 0.021
+   },
+   "signed_bias": {
+    "clean": 0.1474,
+    "flipped": -0.1828,
+    "all": -0.016,
+    "n_clean": 95,
+    "n_flipped": 93
+   },
+   "decomp": {
+    "party_bias": -0.016,
+    "content_bias": 0.1649
+   },
+   "glm": {
+    "intercept": {
+     "coef": -0.0048,
+     "se": 0.1587,
+     "z": -0.03,
+     "p": 0.975763748955341,
+     "ci": [
+      -0.316,
+      0.306
+     ]
+    },
+    "gold": {
+     "coef": 0.5219,
+     "se": 0.1614,
+     "z": 3.234,
+     "p": 0.0012221429485615193,
+     "ci": [
+      0.206,
+      0.838
+     ]
+    },
+    "party": {
+     "coef": -0.0835,
+     "se": 0.1588,
+     "z": -0.526,
+     "p": 0.5988927017274324,
+     "ci": [
+      -0.395,
+      0.228
+     ]
+    },
+    "content": {
+     "coef": 0.7131,
+     "se": 0.1615,
+     "z": 4.416,
+     "p": 1.003525192539161e-05,
+     "ci": [
+      0.397,
+      1.03
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.0007998400319936012,
+   "judge": {
+    "clean": {
+     "contam": 0.417,
+     "mr": 0.167,
+     "rsn_invalid": 0.655
+    },
+    "flipped": {
+     "contam": 0.552,
+     "mr": 0.26,
+     "rsn_invalid": 0.654
+    },
+    "conflict_mr": 0.208,
+    "congru_mr": 0.219,
+    "conflict_contam": 0.521,
+    "congru_contam": 0.448
+   }
+  },
+  "mistral-politune-hf-left": {
+   "tag": "mistral-politune-hf-left",
+   "ind": "L",
+   "n_political": 192,
+   "n_engaged": 182,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 43,
+     "eng_rate": 0.896
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 47,
+     "eng_rate": 0.979
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 47,
+     "eng_rate": 0.979
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 45,
+     "eng_rate": 0.938
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.083,
+    "flipped": 0.041
+   },
+   "signed_bias": {
+    "clean": -0.1556,
+    "flipped": 0.0652,
+    "all": -0.044,
+    "n_clean": 90,
+    "n_flipped": 92
+   },
+   "decomp": {
+    "party_bias": -0.044,
+    "content_bias": -0.1099
+   },
+   "glm": {
+    "intercept": {
+     "coef": -2.0155,
+     "se": 0.2648,
+     "z": -7.612,
+     "p": 2.6942360615855708e-14,
+     "ci": [
+      -2.534,
+      -1.497
+     ]
+    },
+    "gold": {
+     "coef": 0.3885,
+     "se": 0.2246,
+     "z": 1.73,
+     "p": 0.08367400182878067,
+     "ci": [
+      -0.052,
+      0.829
+     ]
+    },
+    "party": {
+     "coef": -0.4892,
+     "se": 0.2282,
+     "z": -2.143,
+     "p": 0.03207875087911759,
+     "ci": [
+      -0.937,
+      -0.042
+     ]
+    },
+    "content": {
+     "coef": -0.8381,
+     "se": 0.2502,
+     "z": -3.35,
+     "p": 0.000808056899136716,
+     "ci": [
+      -1.328,
+      -0.348
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.015996800639872025,
+   "judge": {
+    "clean": {
+     "contam": 0.979,
+     "mr": 0.719,
+     "rsn_invalid": 0.824
+    },
+    "flipped": {
+     "contam": 0.99,
+     "mr": 0.865,
+     "rsn_invalid": 0.922
+    },
+    "conflict_mr": 0.812,
+    "congru_mr": 0.771,
+    "conflict_contam": 0.99,
+    "congru_contam": 0.979
+   }
+  },
+  "mistral-politune-hf-right": {
+   "tag": "mistral-politune-hf-right",
+   "ind": "R",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": -0.0104,
+    "flipped": -0.0208,
+    "all": -0.0156,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": -0.0156,
+    "content_bias": 0.0052
+   },
+   "glm": {
+    "intercept": {
+     "coef": -1.8816,
+     "se": 0.2416,
+     "z": -7.788,
+     "p": 6.7977885331802405e-15,
+     "ci": [
+      -2.355,
+      -1.408
+     ]
+    },
+    "gold": {
+     "coef": 0.8337,
+     "se": 0.241,
+     "z": 3.46,
+     "p": 0.0005406288550178661,
+     "ci": [
+      0.361,
+      1.306
+     ]
+    },
+    "party": {
+     "coef": -0.1248,
+     "se": 0.2045,
+     "z": -0.61,
+     "p": 0.5417612538146925,
+     "ci": [
+      -0.526,
+      0.276
+     ]
+    },
+    "content": {
+     "coef": 0.0416,
+     "se": 0.204,
+     "z": 0.204,
+     "p": 0.8384684849705666,
+     "ci": [
+      -0.358,
+      0.441
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 1.0,
+   "judge": {
+    "clean": {
+     "contam": 0.073,
+     "mr": 0.229,
+     "rsn_invalid": 0.563
+    },
+    "flipped": {
+     "contam": 0.031,
+     "mr": 0.26,
+     "rsn_invalid": 0.596
+    },
+    "conflict_mr": 0.26,
+    "congru_mr": 0.229,
+    "conflict_contam": 0.073,
+    "congru_contam": 0.031
+   }
+  },
+  "llama-base": {
+   "tag": "llama-base",
+   "ind": "-",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": -0.0208,
+    "flipped": 0.0208,
+    "all": 0.0,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0,
+    "content_bias": -0.0208
+   },
+   "glm": {
+    "intercept": {
+     "coef": 1.3506,
+     "se": 0.3132,
+     "z": 4.312,
+     "p": 1.6192282266795583e-05,
+     "ci": [
+      0.737,
+      1.965
+     ]
+    },
+    "gold": {
+     "coef": 2.096,
+     "se": 0.3139,
+     "z": 6.678,
+     "p": 2.4212092706418607e-11,
+     "ci": [
+      1.481,
+      2.711
+     ]
+    },
+    "party": {
+     "coef": 0.0,
+     "se": 0.2051,
+     "z": 0.0,
+     "p": 1.0,
+     "ci": [
+      -0.402,
+      0.402
+     ]
+    },
+    "content": {
+     "coef": -0.168,
+     "se": 0.2058,
+     "z": -0.817,
+     "p": 0.41413455870743343,
+     "ci": [
+      -0.571,
+      0.235
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.5828834233153369,
+   "judge": {
+    "clean": {
+     "contam": 0.0,
+     "mr": 0.0,
+     "rsn_invalid": 0.177
+    },
+    "flipped": {
+     "contam": 0.0,
+     "mr": 0.031,
+     "rsn_invalid": 0.188
+    },
+    "conflict_mr": 0.031,
+    "congru_mr": 0.0,
+    "conflict_contam": 0.0,
+    "congru_contam": 0.0
+   }
+  },
+  "llama-roleplay-left": {
+   "tag": "llama-roleplay-left",
+   "ind": "L",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": -0.0312,
+    "flipped": 0.1458,
+    "all": 0.0573,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0573,
+    "content_bias": -0.0885
+   },
+   "glm": {
+    "intercept": {
+     "coef": -0.4362,
+     "se": 0.175,
+     "z": -2.492,
+     "p": 0.012704827522609596,
+     "ci": [
+      -0.779,
+      -0.093
+     ]
+    },
+    "gold": {
+     "coef": 1.1358,
+     "se": 0.1807,
+     "z": 6.287,
+     "p": 3.2344369234448367e-10,
+     "ci": [
+      0.782,
+      1.49
+     ]
+    },
+    "party": {
+     "coef": 0.3213,
+     "se": 0.1734,
+     "z": 1.854,
+     "p": 0.06378875844011081,
+     "ci": [
+      -0.018,
+      0.661
+     ]
+    },
+    "content": {
+     "coef": -0.4931,
+     "se": 0.1761,
+     "z": -2.8,
+     "p": 0.005111213575973776,
+     "ci": [
+      -0.838,
+      -0.148
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.025994801039792043,
+   "judge": {
+    "clean": {
+     "contam": 0.052,
+     "mr": 0.073,
+     "rsn_invalid": 0.24
+    },
+    "flipped": {
+     "contam": 0.083,
+     "mr": 0.104,
+     "rsn_invalid": 0.302
+    },
+    "conflict_mr": 0.094,
+    "congru_mr": 0.083,
+    "conflict_contam": 0.073,
+    "congru_contam": 0.062
+   }
+  },
+  "llama-roleplay-right": {
+   "tag": "llama-roleplay-right",
+   "ind": "R",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0,
+    "flipped": 0.0208,
+    "all": 0.0104,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0104,
+    "content_bias": -0.0104
+   },
+   "glm": {
+    "intercept": {
+     "coef": -0.0,
+     "se": 0.1692,
+     "z": -0.0,
+     "p": 0.9999999999999999,
+     "ci": [
+      -0.332,
+      0.332
+     ]
+    },
+    "gold": {
+     "coef": 1.1566,
+     "se": 0.1693,
+     "z": 6.831,
+     "p": 8.448010815679888e-12,
+     "ci": [
+      0.825,
+      1.489
+     ]
+    },
+    "party": {
+     "coef": 0.0572,
+     "se": 0.1693,
+     "z": 0.338,
+     "p": 0.7352338746132304,
+     "ci": [
+      -0.274,
+      0.389
+     ]
+    },
+    "content": {
+     "coef": -0.0572,
+     "se": 0.1693,
+     "z": -0.338,
+     "p": 0.7352338746132305,
+     "ci": [
+      -0.389,
+      0.274
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.8862227554489103,
+   "judge": {
+    "clean": {
+     "contam": 0.135,
+     "mr": 0.094,
+     "rsn_invalid": 0.281
+    },
+    "flipped": {
+     "contam": 0.156,
+     "mr": 0.094,
+     "rsn_invalid": 0.305
+    },
+    "conflict_mr": 0.104,
+    "congru_mr": 0.083,
+    "conflict_contam": 0.146,
+    "congru_contam": 0.146
+   }
+  },
+  "llama-pvsteer-ml-left-a2_5": {
+   "tag": "llama-pvsteer-ml-left-a2_5",
+   "ind": "L",
+   "n_political": 192,
+   "n_engaged": 192,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.0,
+    "flipped": 0.0,
+    "all": 0.0,
+    "n_clean": 96,
+    "n_flipped": 96
+   },
+   "decomp": {
+    "party_bias": 0.0,
+    "content_bias": 0.0
+   },
+   "glm": null,
+   "content_perm_p": 1.0,
+   "judge": {
+    "clean": {
+     "contam": 0.479,
+     "mr": 0.021,
+     "rsn_invalid": 0.5
+    },
+    "flipped": {
+     "contam": 0.458,
+     "mr": 0.031,
+     "rsn_invalid": 0.51
+    },
+    "conflict_mr": 0.031,
+    "congru_mr": 0.021,
+    "conflict_contam": 0.49,
+    "congru_contam": 0.448
+   }
+  },
+  "llama-pvsteer-ml-right-a3": {
+   "tag": "llama-pvsteer-ml-right-a3",
+   "ind": "R",
+   "n_political": 192,
+   "n_engaged": 157,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 39,
+     "eng_rate": 0.812
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 40,
+     "eng_rate": 0.833
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 39,
+     "eng_rate": 0.812
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 39,
+     "eng_rate": 0.812
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.021,
+    "flipped": 0.0
+   },
+   "signed_bias": {
+    "clean": 0.038,
+    "flipped": -0.0128,
+    "all": 0.0127,
+    "n_clean": 79,
+    "n_flipped": 78
+   },
+   "decomp": {
+    "party_bias": 0.0127,
+    "content_bias": 0.0255
+   },
+   "glm": {
+    "intercept": {
+     "coef": -10.6792,
+     "se": 9.828,
+     "z": -1.087,
+     "p": 0.2772095951413963,
+     "ci": [
+      -29.942,
+      8.584
+     ]
+    },
+    "gold": {
+     "coef": 2.6852,
+     "se": 5.9217,
+     "z": 0.453,
+     "p": 0.6502284301176107,
+     "ci": [
+      -8.921,
+      14.292
+     ]
+    },
+    "party": {
+     "coef": 2.5935,
+     "se": 5.9409,
+     "z": 0.437,
+     "p": 0.6624314613672913,
+     "ci": [
+      -9.051,
+      14.238
+     ]
+    },
+    "content": {
+     "coef": 2.618,
+     "se": 5.9357,
+     "z": 0.441,
+     "p": 0.6591655408741112,
+     "ci": [
+      -9.016,
+      14.252
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.6318736252749451,
+   "judge": {
+    "clean": {
+     "contam": 0.125,
+     "mr": 0.375,
+     "rsn_invalid": 0.716
+    },
+    "flipped": {
+     "contam": 0.094,
+     "mr": 0.542,
+     "rsn_invalid": 0.863
+    },
+    "conflict_mr": 0.448,
+    "congru_mr": 0.469,
+    "conflict_contam": 0.062,
+    "congru_contam": 0.156
+   }
+  },
+  "llama-politune-hf-left": {
+   "tag": "llama-politune-hf-left",
+   "ind": "L",
+   "n_political": 192,
+   "n_engaged": 190,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 46,
+     "eng_rate": 0.958
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.0,
+    "flipped": 0.042
+   },
+   "signed_bias": {
+    "clean": -0.0625,
+    "flipped": 0.2766,
+    "all": 0.1053,
+    "n_clean": 96,
+    "n_flipped": 94
+   },
+   "decomp": {
+    "party_bias": 0.1053,
+    "content_bias": -0.1684
+   },
+   "glm": {
+    "intercept": {
+     "coef": 0.7845,
+     "se": 0.1904,
+     "z": 4.119,
+     "p": 3.800156505153275e-05,
+     "ci": [
+      0.411,
+      1.158
+     ]
+    },
+    "gold": {
+     "coef": 0.8584,
+     "se": 0.1908,
+     "z": 4.499,
+     "p": 6.831673397569076e-06,
+     "ci": [
+      0.484,
+      1.232
+     ]
+    },
+    "party": {
+     "coef": 0.6705,
+     "se": 0.1879,
+     "z": 3.568,
+     "p": 0.00035965161671827644,
+     "ci": [
+      0.302,
+      1.039
+     ]
+    },
+    "content": {
+     "coef": -0.9963,
+     "se": 0.1952,
+     "z": -5.105,
+     "p": 3.3165856683757575e-07,
+     "ci": [
+      -1.379,
+      -0.614
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.0003999200159968006,
+   "judge": {
+    "clean": {
+     "contam": 0.26,
+     "mr": 0.135,
+     "rsn_invalid": 0.425
+    },
+    "flipped": {
+     "contam": 0.479,
+     "mr": 0.333,
+     "rsn_invalid": 0.564
+    },
+    "conflict_mr": 0.302,
+    "congru_mr": 0.167,
+    "conflict_contam": 0.427,
+    "congru_contam": 0.312
+   }
+  },
+  "llama-politune-hf-right": {
+   "tag": "llama-politune-hf-right",
+   "ind": "R",
+   "n_political": 192,
+   "n_engaged": 136,
+   "engagement": {
+    "clean-left": {
+     "n": 48,
+     "engaged": 27,
+     "eng_rate": 0.562
+    },
+    "clean-right": {
+     "n": 48,
+     "engaged": 48,
+     "eng_rate": 1.0
+    },
+    "flipped-left": {
+     "n": 48,
+     "engaged": 15,
+     "eng_rate": 0.312
+    },
+    "flipped-right": {
+     "n": 48,
+     "engaged": 46,
+     "eng_rate": 0.958
+    }
+   },
+   "arm_asymmetry": {
+    "clean": 0.438,
+    "flipped": 0.646
+   },
+   "signed_bias": {
+    "clean": 0.1333,
+    "flipped": 0.2623,
+    "all": 0.1912,
+    "n_clean": 75,
+    "n_flipped": 61
+   },
+   "decomp": {
+    "party_bias": 0.1912,
+    "content_bias": -0.0441
+   },
+   "glm": {
+    "intercept": {
+     "coef": 6.4622,
+     "se": 6.9459,
+     "z": 0.93,
+     "p": 0.35218445426740397,
+     "ci": [
+      -7.152,
+      20.076
+     ]
+    },
+    "gold": {
+     "coef": -0.0572,
+     "se": 0.7176,
+     "z": -0.08,
+     "p": 0.9364918064998488,
+     "ci": [
+      -1.464,
+      1.349
+     ]
+    },
+    "party": {
+     "coef": 0.2781,
+     "se": 0.7176,
+     "z": 0.387,
+     "p": 0.6984148224660957,
+     "ci": [
+      -1.129,
+      1.685
+     ]
+    },
+    "content": {
+     "coef": 2.9323,
+     "se": 6.9458,
+     "z": 0.422,
+     "p": 0.6728978799844669,
+     "ci": [
+      -10.681,
+      16.546
+     ]
+    },
+    "_converged": true
+   },
+   "content_perm_p": 0.5430913817236552,
+   "judge": {
+    "clean": {
+     "contam": 1.0,
+     "mr": 0.188,
+     "rsn_invalid": 0.54
+    },
+    "flipped": {
+     "contam": 1.0,
+     "mr": 0.271,
+     "rsn_invalid": 0.617
+    },
+    "conflict_mr": 0.302,
+    "congru_mr": 0.156,
+    "conflict_contam": 1.0,
+    "congru_contam": 1.0
+   }
+  }
+ }
+}

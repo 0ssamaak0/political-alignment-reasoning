@@ -1,0 +1,326 @@
+[
+  {
+    "gidx": 349,
+    "cell": "llama-base",
+    "row_idx": 157,
+    "lean": "right",
+    "axis": "collapsed",
+    "kind": "collapsed_false_high_repeat",
+    "detail": "max_4gram_repeat=8 but collapsed=false"
+  },
+  {
+    "gidx": 822,
+    "cell": "llama-roleplay-left",
+    "row_idx": 54,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=VALID gold=VALID -> expected correct, judge said wrong"
+  },
+  {
+    "gidx": 1014,
+    "cell": "llama-roleplay-right",
+    "row_idx": 54,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=VALID gold=VALID -> expected correct, judge said wrong"
+  },
+  {
+    "gidx": 1033,
+    "cell": "llama-roleplay-right",
+    "row_idx": 73,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=INVALID gold=INVALID -> expected correct, judge said wrong"
+  },
+  {
+    "gidx": 1402,
+    "cell": "mistral-steering-right",
+    "row_idx": 58,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_override_to_unparseable",
+    "detail": "cascade parsed VALID but judge outcome=off_format"
+  },
+  {
+    "gidx": 1409,
+    "cell": "mistral-steering-right",
+    "row_idx": 65,
+    "lean": "left",
+    "axis": "collapsed",
+    "kind": "collapsed_false_high_repeat",
+    "detail": "max_4gram_repeat=8 but collapsed=false"
+  },
+  {
+    "gidx": 1413,
+    "cell": "mistral-steering-right",
+    "row_idx": 69,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_override_to_unparseable",
+    "detail": "cascade parsed VALID but judge outcome=no_answer"
+  },
+  {
+    "gidx": 1470,
+    "cell": "mistral-steering-right",
+    "row_idx": 126,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=wrong"
+  },
+  {
+    "gidx": 1490,
+    "cell": "mistral-steering-right",
+    "row_idx": 146,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "judge_override_to_unparseable",
+    "detail": "cascade parsed VALID but judge outcome=off_format"
+  },
+  {
+    "gidx": 1498,
+    "cell": "mistral-steering-right",
+    "row_idx": 154,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=wrong"
+  },
+  {
+    "gidx": 1509,
+    "cell": "mistral-steering-right",
+    "row_idx": 165,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "judge_override_to_unparseable",
+    "detail": "cascade parsed VALID but judge outcome=no_answer"
+  },
+  {
+    "gidx": 1510,
+    "cell": "mistral-steering-right",
+    "row_idx": 166,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "judge_override_to_unparseable",
+    "detail": "cascade parsed VALID but judge outcome=no_answer"
+  },
+  {
+    "gidx": 1526,
+    "cell": "mistral-steering-right",
+    "row_idx": 182,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=wrong"
+  },
+  {
+    "gidx": 1593,
+    "cell": "llama-steering-left",
+    "row_idx": 57,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=wrong"
+  },
+  {
+    "gidx": 1693,
+    "cell": "llama-steering-left",
+    "row_idx": 157,
+    "lean": "right",
+    "axis": "collapsed",
+    "kind": "collapsed_false_high_repeat",
+    "detail": "max_4gram_repeat=10 but collapsed=false"
+  },
+  {
+    "gidx": 1807,
+    "cell": "llama-steering-right",
+    "row_idx": 79,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=correct"
+  },
+  {
+    "gidx": 1857,
+    "cell": "llama-steering-right",
+    "row_idx": 129,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=correct"
+  },
+  {
+    "gidx": 1871,
+    "cell": "llama-steering-right",
+    "row_idx": 143,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=wrong"
+  },
+  {
+    "gidx": 1891,
+    "cell": "llama-steering-right",
+    "row_idx": 163,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=correct"
+  },
+  {
+    "gidx": 1928,
+    "cell": "mistral-DPO-left",
+    "row_idx": 8,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=correct"
+  },
+  {
+    "gidx": 2068,
+    "cell": "mistral-DPO-left",
+    "row_idx": 148,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_parsed_what_cascade_didnt",
+    "detail": "cascade unmapped (verdict='UNMAPPABLE') but judge outcome=wrong"
+  },
+  {
+    "gidx": 2143,
+    "cell": "mistral-DPO-right",
+    "row_idx": 31,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "judge_override_to_unparseable",
+    "detail": "cascade parsed INVALID but judge outcome=off_format"
+  },
+  {
+    "gidx": 2143,
+    "cell": "mistral-DPO-right",
+    "row_idx": 31,
+    "lean": "right",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=1 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2145,
+    "cell": "mistral-DPO-right",
+    "row_idx": 33,
+    "lean": "left",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=0 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2147,
+    "cell": "mistral-DPO-right",
+    "row_idx": 35,
+    "lean": "left",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=0 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2216,
+    "cell": "mistral-DPO-right",
+    "row_idx": 104,
+    "lean": "right",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=0 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2219,
+    "cell": "mistral-DPO-right",
+    "row_idx": 107,
+    "lean": "right",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=1 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2223,
+    "cell": "mistral-DPO-right",
+    "row_idx": 111,
+    "lean": "right",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=0 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2224,
+    "cell": "mistral-DPO-right",
+    "row_idx": 112,
+    "lean": "left",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=0 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2287,
+    "cell": "mistral-DPO-right",
+    "row_idx": 175,
+    "lean": "right",
+    "axis": "collapsed",
+    "kind": "collapsed_true_low_signal",
+    "detail": "max_4gram_repeat=0 distinct=1.0 but collapsed=true"
+  },
+  {
+    "gidx": 2367,
+    "cell": "llama-DPO-left",
+    "row_idx": 63,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=INVALID gold=VALID -> expected wrong, judge said correct"
+  },
+  {
+    "gidx": 2497,
+    "cell": "llama-DPO-right",
+    "row_idx": 1,
+    "lean": "left",
+    "axis": "collapsed",
+    "kind": "collapsed_false_high_repeat",
+    "detail": "max_4gram_repeat=14 but collapsed=false"
+  },
+  {
+    "gidx": 2656,
+    "cell": "llama-DPO-right",
+    "row_idx": 160,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=INVALID gold=INVALID -> expected correct, judge said wrong"
+  },
+  {
+    "gidx": 2660,
+    "cell": "llama-DPO-right",
+    "row_idx": 164,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=INVALID gold=VALID -> expected wrong, judge said correct"
+  },
+  {
+    "gidx": 2751,
+    "cell": "llama-DPO-right-2nd",
+    "row_idx": 63,
+    "lean": "right",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=INVALID gold=VALID -> expected wrong, judge said correct"
+  },
+  {
+    "gidx": 2754,
+    "cell": "llama-DPO-right-2nd",
+    "row_idx": 66,
+    "lean": "left",
+    "axis": "outcome",
+    "kind": "outcome_vs_verdict_mismatch",
+    "detail": "parsed=VALID gold=INVALID -> expected wrong, judge said correct"
+  }
+]

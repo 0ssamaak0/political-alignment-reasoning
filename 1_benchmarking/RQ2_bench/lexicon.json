@@ -1,0 +1,111 @@
+{
+  "_comment": "RQ3_bench slot-filler lexicon — authored from scratch (NOT copied from custom_bench). Supplies the slot values for the belief-incongruent syllogism benchmark over patterns T2, T3, T6, which use only {GROUP_A}, {POLICY_X}, {POLICY_Y} (GROUP_B/C, VOTER, PARTY are unused by these patterns and intentionally omitted). Two arms: 'political' (8 partisan topics, the main politicized version) and 'neutral' (politically-inert control domains). POLICY_X is the IN-GROUP / characteristic (congruent) slot; POLICY_Y is the OUT-GROUP / counter-stereotypical (incongruent) slot.",
+
+  "_flip_convention": "The benchmark emits two variants per item by SWAPPING POLICY_X <-> POLICY_Y at slot-fill time; the lexicon stores only the 'clean' (congruent) content. clean: GROUP_A attributed POLICY_X (its own/characteristic policy). flipped: GROUP_A attributed POLICY_Y (the out-group's/counter-stereotypical policy) — a counter-factual premise. The swap is a uniform rename of two non-logical constants, so the gold validity label is invariant. Resolution: political lean=left -> GROUP_A=parties.left, POLICY_X=topic.dem_favored, POLICY_Y=topic.rep_favored; lean=right mirrors (GROUP_A=parties.right, POLICY_X=topic.rep_favored, POLICY_Y=topic.dem_favored). neutral domain -> GROUP_A/POLICY_X/POLICY_Y taken verbatim from the domain block. The 'flipped' variant swaps POLICY_X and POLICY_Y in all arms.",
+
+  "political": {
+    "_comment": "Main politicized version — same 8 topics and stance phrasings as the project's existing instrument (kept identical by request). dem_favored / rep_favored are the in-/out-group policy phrasings; which one lands in POLICY_X depends on lean (see _flip_convention). marpor_codes + stance_pair carried for provenance (politicize/docs/README.md §4-5). NOTE: climate_policy and immigration are partisan-opposed but not strict logical contraries ('soft-opposition') — stratify them separately in analysis (per README §3); kept as-is by request.",
+
+    "parties": {
+      "left":  { "GROUP_A": "Democrats" },
+      "right": { "GROUP_A": "Republicans" }
+    },
+
+    "topics": {
+      "military_intervention": {
+        "marpor_domain": "Foreign Policy",
+        "marpor_codes": ["104", "105"],
+        "stance_pair": "anti_intervention/pro_intervention",
+        "dem_favored": "restraint on overseas military intervention",
+        "rep_favored": "strong overseas military intervention"
+      },
+      "gun_rights": {
+        "marpor_domain": "Freedom and Democracy",
+        "marpor_codes": ["201.1"],
+        "stance_pair": "pro_gun_control/pro_gun_rights",
+        "dem_favored": "stricter gun control",
+        "rep_favored": "broader gun ownership rights"
+      },
+      "federalism": {
+        "marpor_domain": "Political System",
+        "marpor_codes": ["301", "302"],
+        "stance_pair": "federal_authority/states_rights",
+        "dem_favored": "stronger federal authority",
+        "rep_favored": "stronger states' rights"
+      },
+      "taxes": {
+        "marpor_domain": "Economy",
+        "marpor_codes": ["401", "409"],
+        "stance_pair": "progressive_taxation/tax_cuts",
+        "dem_favored": "progressive taxation",
+        "rep_favored": "tax cuts for corporations and high earners"
+      },
+      "climate_policy": {
+        "marpor_domain": "Welfare and Quality of Life",
+        "marpor_codes": ["501", "416.2"],
+        "stance_pair": "climate_action/climate_skeptical",
+        "dem_favored": "expanded climate regulation",
+        "rep_favored": "fossil fuel production expansion",
+        "soft_opposition": true
+      },
+      "healthcare_policy": {
+        "marpor_domain": "Welfare and Quality of Life",
+        "marpor_codes": ["504", "505"],
+        "stance_pair": "universal_healthcare/private_healthcare",
+        "dem_favored": "universal healthcare",
+        "rep_favored": "private healthcare expansion"
+      },
+      "immigration": {
+        "marpor_domain": "Fabric of Society",
+        "marpor_codes": ["601.2", "602.2"],
+        "stance_pair": "pro_immigration/immigration_restrictive",
+        "dem_favored": "a pathway to citizenship for undocumented immigrants",
+        "rep_favored": "stricter immigration enforcement",
+        "soft_opposition": true
+      },
+      "racial_justice": {
+        "marpor_domain": "Social Groups",
+        "marpor_codes": ["705"],
+        "stance_pair": "pro_racial_justice/race_individualist",
+        "dem_favored": "race-conscious policies to address systemic disparities",
+        "rep_favored": "race-neutral colorblind policies"
+      }
+    }
+  },
+
+  "neutral": {
+    "_comment": "Politically-inert control domains (believability control). Following Gubelmann & Karray (ACL 2025), who use a concrete chess-vs-poker control rather than abstract A/B/C, because our political arm is concrete partisan content — the control is matched in surface complexity. (NeuBAROCO's abstract 'Symbolic' condition is the alternative convention; rejected here for surface-mismatch with the political arm.) Each domain pairs a GROUP_A with its characteristic activity (POLICY_X, congruent) and a contrasting activity that is stereotypically a DIFFERENT group's (POLICY_Y, mildly counter-stereotypical). The neutral flip therefore carries only a WEAK believability prior, vs the strong partisan prior in the political arm — isolating 'does flipping per se hurt' from 'does political belief-conflict hurt'. The two activities sit on a value-neutral structure-vs-improvisation contrast so the 'supporting X opposes Y' premise of T2/T3 reads naturally.",
+
+    "games": {
+      "GROUP_A": "regular chess players",
+      "POLICY_X": "studying classical openings",
+      "POLICY_Y": "bluffing under pressure",
+      "contrast_group": "poker players",
+      "source": "Gubelmann & Karray (ACL 2025) chess-vs-poker control"
+    },
+    "cooking": {
+      "GROUP_A": "trained pastry chefs",
+      "POLICY_X": "following recipes to the gram",
+      "POLICY_Y": "improvising dishes by taste",
+      "contrast_group": "line cooks"
+    },
+    "music": {
+      "GROUP_A": "classical orchestra musicians",
+      "POLICY_X": "reading from sheet music",
+      "POLICY_Y": "improvising solos by ear",
+      "contrast_group": "jazz musicians"
+    },
+    "travel": {
+      "GROUP_A": "guided-tour travelers",
+      "POLICY_X": "following a fixed itinerary",
+      "POLICY_Y": "wandering with no set plan",
+      "contrast_group": "backpackers"
+    },
+    "photography": {
+      "GROUP_A": "professional studio photographers",
+      "POLICY_X": "shooting in full manual mode",
+      "POLICY_Y": "relying on automatic settings",
+      "contrast_group": "casual phone photographers"
+    }
+  }
+}

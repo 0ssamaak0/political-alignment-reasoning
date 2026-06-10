@@ -1,0 +1,38 @@
+# Custom HumanEval for instruct models: chat-template ON, model writes the FULL
+# function in a ```python block; we extract that block (its own consistent
+# indentation) and run the tests. Full 164, 0-shot, greedy pass@1.
+# Run with --include_path on this dir + --apply_chat_template + code-exec flags:
+#   HF_ALLOW_CODE_EVAL=1 lm_eval --tasks humaneval_chat --include_path . \
+#       --apply_chat_template --confirm_run_unsafe_code ...
+task: humaneval_chat
+dataset_path: openai/openai_humaneval
+unsafe_code: true
+output_type: generate_until
+test_split: test
+doc_to_text: "Complete the following Python function. Reply with the full function, including the signature, inside a single ```python code block.\n\n```python\n{{prompt}}\n```"
+doc_to_target: "{{test}}\ncheck({{entry_point}})"
+metric_list:
+  - metric: !function utils.pass_at_k
+    aggregation: mean
+    higher_is_better: true
+    k: [1]
+# Stop at the CLOSING fence only. "```\n" (3 backticks + newline) does NOT match
+# the opening fence "```python\n" (backticks are followed by 'p', not newline),
+# so a preamble like "Here's the solution:\n```python" no longer truncates the
+# generation to empty (the bug with "\n```"). lm-eval's generate_until needs a
+# non-empty `until` (removing it entirely truncates after ~10 tokens), so this
+# also keeps generation running to the full function.
+generation_kwargs:
+  until:
+    - "```\n"
+  max_gen_toks: 1024
+  do_sample: false
+repeats: 1
+num_fewshot: 0
+filter_list:
+  - name: "extract"
+    filter:
+      - function: "custom"
+        filter_fn: !function utils.build_predictions_block
+metadata:
+  version: 1.0

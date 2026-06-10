@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Logs
+*.log
+
+# Model weights / adapters (regenerable from configs + base models)
+*.safetensors
+adapter_model*
+pytorch_model*
+optimizer.pt
+scheduler.pt
+training_args.bin
+checkpoint-*/
+adapters_train*/
+
+# Large raw generation dumps (figures/numbers ship as aggregated JSON instead)
+**/samples.jsonl
+wandb/

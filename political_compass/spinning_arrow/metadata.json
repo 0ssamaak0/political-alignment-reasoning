@@ -1,0 +1,25 @@
+{
+  "tag": "political_compass_spinning_arrow",
+  "arxiv_id": "2402.16786",
+  "doi": "10.48550/arXiv.2402.16786",
+  "source_url": "https://arxiv.org/e-print/2402.16786",
+  "fallback_used": "arxiv_eprint",
+  "entrypoint": "./knowledge/political_compass_spinning_arrow/source/main.tex",
+  "has_source": true,
+  "has_pdf": true,
+  "title": "Political Compass or Spinning Arrow? Towards More Meaningful Evaluations for Values and Opinions in Large Language Models",
+  "authors": "Röttger, Paul; Hofmann, Valentin; Pyatkin, Valentina; Hinck, Musashi; Kirk, Hannah Rose; Schütze, Hinrich; Hovy, Dirk",
+  "venue": "arXiv preprint (2024-02-26 / ACL 2024)",
+  "notes": "arXiv:2402.16786 [cs.CL]. Case study using the PCT to argue that constrained (multiple-choice) evaluations of LLM values are unreliable. Five experiments on Llama2, Mistral, Zephyr, GPT-3.5, GPT-4 with temperature=0.",
+  "github_repo": {
+    "url": "https://github.com/paul-rottger/llm-values-pct",
+    "official": true,
+    "cloned_to": "code/"
+  },
+  "huggingface": {
+    "models": [],
+    "datasets": [],
+    "spaces": [],
+    "note": "no HF links mentioned in paper or repo README"
+  }
+}
