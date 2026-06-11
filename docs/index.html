@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Political Alignment &amp; Reasoning — Judge Explorer</title>
+<title>Political Alignment &amp; Reasoning — Reading Companion</title>
 <link rel="preconnect" href="">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -11,22 +11,29 @@
 
 <header class="app-header">
   <div class="brand">
-    <div class="brand-title">Judge Explorer</div>
-    <div class="brand-sub">Political alignment &amp; reasoning &middot; LLM judge outputs</div>
+    <div class="brand-title">Political Alignment &amp; Reasoning</div>
+    <div class="brand-sub">An interactive companion to the thesis &middot; LLM judge outputs</div>
   </div>
   <nav class="tabs" id="tabs">
-    <button class="tab" data-mode="browser" aria-pressed="true">Example Browser</button>
+    <button class="tab" data-mode="tour" aria-pressed="true">Findings Tour</button>
+    <button class="tab" data-mode="browser" aria-pressed="false">Example Browser</button>
     <button class="tab" data-mode="strength" aria-pressed="false">Strength Explorer</button>
   </nav>
   <div class="header-actions">
+    <button id="shareBtn" class="ghost-btn" title="Copy a link to the current view, filters included">Share view</button>
     <button id="glossaryBtn" class="ghost-btn" title="Definitions from the thesis">Glossary</button>
     <button id="themeBtn" class="ghost-btn" title="Theme follows your device by default">Auto</button>
   </div>
 </header>
 
 <main>
+  <!-- ============================= FINDINGS TOUR ============================= -->
+  <section id="view-tour" class="view view-single">
+    <div class="tour-content" id="tourBody"><!-- built in JS --></div>
+  </section>
+
   <!-- ============================ EXAMPLE BROWSER ============================ -->
-  <section id="view-browser" class="view">
+  <section id="view-browser" class="view hidden">
     <aside class="controls" id="browserControls"><!-- built in JS --></aside>
     <div class="content">
       <div id="browserStats" class="stats-wrap"><!-- built in JS --></div>
@@ -48,6 +55,13 @@
         <div class="chart-box"><canvas id="strengthChart"></canvas></div>
         <div class="legend-hint" id="strengthLegendHint"></div>
       </div>
+      <div class="panel chart-panel" id="comparePanel">
+        <div class="panel-head">
+          <h3>Both directions on one axis</h3>
+          <span class="panel-note" id="compareNote"></span>
+        </div>
+        <div class="chart-box"><canvas id="compareChart"></canvas></div>
+      </div>
       <div id="strengthResponses" class="panel responses-panel"><!-- built in JS --></div>
     </div>
   </section>
@@ -68,6 +82,7 @@
 
 <script src="assets/vendor/chart.umd.min.js"></script>
 <script src="assets/js/util.js"></script>
+<script src="assets/js/tour.js"></script>
 <script src="assets/js/browser.js"></script>
 <script src="assets/js/strength.js"></script>
 <script src="assets/js/app.js"></script>

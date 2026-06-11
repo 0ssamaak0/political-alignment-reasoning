@@ -14,7 +14,7 @@
   B._charts = [];
   B._spotlight = null;
 
-  function defaultState() {
+  B.defaultState = function () {
     return {
       benchmark: "boolean_expressions",
       model: "llama",
@@ -26,10 +26,36 @@
       },
       search: "", sort: "default",
     };
-  }
+  };
+
+  // one-line context per benchmark, tying the cell to the thesis
+  const BENCH_BLURB = {
+    boolean_expressions: "Neutral BBH task, evaluate a nested Boolean expression. 250 items, RQ1, thesis Section 4.1.",
+    logical_deduction_three_objects: "Neutral BBH task, order three objects from clues. 250 items, RQ1, thesis Section 4.1.",
+    web_of_lies: "Neutral BBH task, track who lies and who tells the truth. 250 items, RQ1, thesis Section 4.1.",
+    navigate: "Neutral BBH task, decide whether navigation steps return to the start. 250 items, RQ1, thesis Section 4.1.",
+    value_loaded: "Political syllogisms whose conclusion favors one side, judged valid or invalid. Left and right versions share the same logical form. 192 items, RQ2, thesis Section 4.2.",
+    party_fixed: "Syllogisms that keep the named party fixed and swap only the policy content, turning a believable partisan premise into a false one. RQ2, thesis Section 4.2.",
+  };
+
+  // short tooltips for labels that have no glossary entry
+  const OUTCOME_TIP = {
+    correct: "The parsed answer matches the gold label.",
+    wrong: "The parsed answer does not match the gold label.",
+    no_answer: "No parseable answer, a refusal, empty output, or a cut-off response.",
+    off_format: "An answer is present but not in the requested format.",
+  };
+  const FALLACY_TIP = {
+    equivocation: "A key term shifts meaning between the premises and the conclusion.",
+    false_dilemma: "The reasoning treats two options as if they were the only ones.",
+    token_bias_shortcut: "The verdict follows a surface keyword instead of the logical form.",
+    premise_truth_conflation: "The response judges whether the premises are true instead of whether the conclusion follows from them.",
+    illicit_premise_insertion: "The reasoning adds a premise that the prompt does not contain.",
+    motivational_reasoning: "The desirability of the conclusion drives the verdict instead of the logic.",
+  };
 
   B.init = function () {
-    if (!App.state.browser) App.state.browser = defaultState();
+    if (!App.state.browser) App.state.browser = B.defaultState();
     B.renderControls();
     B.reload();
   };
@@ -56,10 +82,11 @@
       if (b.id === st.benchmark) o.selected = true;
       groups[b.type].appendChild(o);
     });
-    host.appendChild(h("div", { class: "cgroup" }, [h("label", { text: "Benchmark" }), sel,
-      groups.neutral, groups.political].slice(0, 2)));
-    // append optgroups into the select
     sel.appendChild(groups.neutral); sel.appendChild(groups.political);
+    host.appendChild(h("div", { class: "cgroup" }, [
+      h("label", { text: "Benchmark" }), sel,
+      BENCH_BLURB[st.benchmark] ? h("p", { class: "bench-blurb", text: BENCH_BLURB[st.benchmark] }) : null,
+    ].filter(Boolean)));
 
     // Model segmented
     host.appendChild(h("div", { class: "cgroup" }, [
@@ -98,7 +125,7 @@
         h("span", { class: "clabel", text: "Filters", style: "margin:0" }),
         h("button", { class: "reset-link", text: "reset", onclick: function () {
           const keep = { benchmark: st.benchmark, model: st.model, config: st.config };
-          App.state.browser = Object.assign(defaultState(), keep);
+          App.state.browser = Object.assign(B.defaultState(), keep);
           B.renderControls(); B.refilter();
         }}),
       ]),
@@ -185,10 +212,15 @@
   };
 
   B.refilter = function () {
-    App.saveHash();
     const st = App.state.browser;
     B._filtered = applyFilters(B._records, st.filters, isRQ2(), st.search);
     B._rendered = 40;
+    if (st.sel != null) {  // example permalink: spotlight the linked card once
+      B._spotlight = st.sel;
+      B._rendered = B._filtered.length;
+      delete st.sel;
+    }
+    App.saveHash();
     B.renderStats();
     B.renderResults();
   };
@@ -385,34 +417,43 @@
     B.renderResults();
   };
 
-  function tag(cls, label, color) {
+  function tag(cls, label, color, tip) {
     const dot = color ? h("span", { class: "dot", style: "background:" + color }) : null;
-    return h("span", { class: "tag " + cls }, [dot, document.createTextNode(label)].filter(Boolean));
+    return h("span", { class: "tag " + cls, title: tip || null }, [dot, document.createTextNode(label)].filter(Boolean));
   }
 
   function card(r) {
     const rq2 = isRQ2();
+    const q = App.state.browser.search;
     const top = h("div", { class: "card-top" }, [
-      h("span", { class: "card-id", text: "#" + r.id }),
+      h("button", { class: "card-id", title: "Copy a link to this example, filters included", onclick: function () {
+        const st = App.state.browser;
+        st.sel = r.id; App.saveHash();
+        App.copyText(location.href, "Link to example #" + r.id + " copied");
+        delete st.sel; App.saveHash();
+      }}, "#" + r.id),
       rq2
         ? h("span", { class: "card-ans", html: "gold <b>" + r.valid + "</b> &middot; model <b>" + (r.parsed_verdict || "—") + "</b>" })
         : h("span", { class: "card-ans", html: "gold <b>" + esc(r.gold) + "</b> &middot; parsed <b>" + esc(r.parsed == null ? "—" : r.parsed) + "</b>" }),
       h("span", { class: "spacer" }),
-      tag(App.OUTCOME_TAG[r.outcome] || "neutral", App.lbl("outcome", r.outcome)),
+      tag(App.OUTCOME_TAG[r.outcome] || "neutral", App.lbl("outcome", r.outcome), null, OUTCOME_TIP[r.outcome]),
       (!rq2 && r.confidence != null) ? stars(r.confidence) : null,
     ].filter(Boolean));
 
     const tags = h("div", { class: "tags", style: "margin-bottom:10px" }, [
-      r.contaminated ? tag("warn", "Contaminated") : null,
-      r.collapsed ? tag("purple", "Collapsed") : null,
-      tag(App.CAT_TAG[r.category] || "neutral", App.lbl("primary_category", r.category), App.CAT_COLOR[r.category]),
-      tag(App.VALIDITY_TAG[r.validity] || "neutral", "Reasoning: " + App.lbl("reasoning_validity", r.validity)),
-      (r.fallacy && r.fallacy !== "none") ? tag("slate", App.lbl("fallacy_lens", r.fallacy)) : null,
-      rq2 && r.item_lean ? tag(App.DIR_TAG[r.item_lean], (r.item_lean === "left" ? "Left" : "Right") + " argument") : null,
-      rq2 ? tag("neutral", "Argument " + r.valid) : null,
+      r.contaminated ? tag("warn", "Contaminated", null, App.defFor("Contaminated")) : null,
+      r.collapsed ? tag("purple", "Collapsed", null, App.defFor("Collapsed")) : null,
+      tag(App.CAT_TAG[r.category] || "neutral", App.lbl("primary_category", r.category), App.CAT_COLOR[r.category],
+        App.defFor(App.lbl("primary_category", r.category))),
+      tag(App.VALIDITY_TAG[r.validity] || "neutral", "Reasoning: " + App.lbl("reasoning_validity", r.validity), null,
+        App.defFor("Reasoning validity")),
+      (r.fallacy && r.fallacy !== "none") ? tag("slate", App.lbl("fallacy_lens", r.fallacy), null, FALLACY_TIP[r.fallacy]) : null,
+      rq2 && r.item_lean ? tag(App.DIR_TAG[r.item_lean], (r.item_lean === "left" ? "Left" : "Right") + " argument", null,
+        "The political side this argument's conclusion favors.") : null,
+      rq2 ? tag("neutral", "Argument " + r.valid, null, "The gold validity label of the argument.") : null,
     ].filter(Boolean));
 
-    const respText = h("div", { class: "response-text clamped", text: r.response || "(no response)" });
+    const respText = h("div", { class: "response-text clamped" }, App.markText(r.response || "(no response)", q));
     const moreBtn = h("button", { class: "toggle-more", text: "Show full response", onclick: function () {
       const cl = respText.classList.toggle("clamped");
       this.textContent = cl ? "Show full response" : "Show less";
@@ -421,12 +462,12 @@
     const body = h("div", { class: "card-body" }, [
       tags,
       h("p", { class: "field-label", text: "Prompt" }),
-      h("div", { class: "prompt-text", text: r.prompt || "" }),
+      h("div", { class: "prompt-text" }, App.markText(r.prompt || "", q)),
       h("p", { class: "field-label", text: "Model response" }),
       respText, ((r.response || "").length > 320 ? moreBtn : null),
       h("div", { class: "judge-box" }, [
         h("p", { class: "field-label", text: "Judge" }),
-        h("div", { class: "judge-reason", text: r.judge_reasoning || "" }),
+        h("div", { class: "judge-reason" }, App.markText(r.judge_reasoning || "", q)),
         r.justification ? h("div", { class: "judge-quote", text: "“" + r.justification + "”" }) : null,
       ].filter(Boolean)),
     ].filter(Boolean));

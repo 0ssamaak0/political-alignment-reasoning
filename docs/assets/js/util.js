@@ -59,6 +59,12 @@
     App.modelLabel = {}; manifest.models.forEach(function (m) { App.modelLabel[m.id] = m.label; });
     App.methodLabel = {}; manifest.methods.forEach(function (m) { App.methodLabel[m.id] = m.label; });
     App.benchById = {}; manifest.benchmarks.forEach(function (b) { App.benchById[b.id] = b; });
+    App.glossMap = {};
+    (manifest.glossary || []).forEach(function (g) { App.glossMap[g.term.toLowerCase()] = g.definition; });
+  };
+  // thesis definition for a label, used for tooltips
+  App.defFor = function (label) {
+    return (App.glossMap && App.glossMap[String(label || "").toLowerCase()]) || "";
   };
   App.lbl = function (vocab, key) {
     const m = App.labelMaps[vocab];
@@ -94,6 +100,48 @@
   App.VALIDITY_TAG = { valid: "good", invalid: "bad", opaque: "slate", "n/a": "neutral" };
   App.DIR_TAG = { left: "left", right: "right" };
 
+  /* ----------------------------- text highlight ----------------------------- */
+  // Returns a DocumentFragment with every occurrence of q wrapped in <mark>.
+  App.markText = function (text, q) {
+    const frag = document.createDocumentFragment();
+    text = String(text == null ? "" : text);
+    q = String(q || "").trim();
+    if (!q) { frag.appendChild(document.createTextNode(text)); return frag; }
+    const lower = text.toLowerCase(), needle = q.toLowerCase();
+    let i = 0, hit;
+    while ((hit = lower.indexOf(needle, i)) >= 0) {
+      if (hit > i) frag.appendChild(document.createTextNode(text.slice(i, hit)));
+      const m = document.createElement("mark");
+      m.textContent = text.slice(hit, hit + q.length);
+      frag.appendChild(m);
+      i = hit + q.length;
+    }
+    frag.appendChild(document.createTextNode(text.slice(i)));
+    return frag;
+  };
+
+  /* ----------------------------- toast + copy ----------------------------- */
+  App.toast = function (msg) {
+    let t = App.qs("#toast");
+    if (!t) { t = App.h("div", { id: "toast" }); document.body.appendChild(t); }
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(App._toastTimer);
+    App._toastTimer = setTimeout(function () { t.classList.remove("show"); }, 1900);
+  };
+  App.copyText = function (str, msg) {
+    function done() { App.toast(msg || "Copied"); }
+    function fallback() {
+      const ta = document.createElement("textarea");
+      ta.value = str; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { /* ignore */ }
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(str).then(done, fallback);
+    else fallback();
+  };
+
   /* ----------------------------- formatting ----------------------------- */
   App.fmtPct = function (v) { return v == null ? "—" : (Math.round(v * 10) / 10) + "%"; };
   App.fmtNum = function (v) { return v == null ? "—" : (Math.round(v * 10) / 10); };
@@ -103,7 +151,7 @@
 
   /* ----------------------------- state + URL hash ----------------------------- */
   App.state = {
-    mode: "browser",
+    mode: "tour",
     browser: null,   // set by browser.js on first init
     strength: null,  // set by strength.js on first init
   };
