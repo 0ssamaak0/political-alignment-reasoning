@@ -1,7 +1,7 @@
-# 3_persona_vectors
+# persona_vectors
 
 Extraction of contrastive left/right political persona vectors used by the
-activation-steering experiments in `4_steering/`.
+activation-steering experiments in `steering/`.
 
 The extracted vectors are included as `shared/vectors/{mistral,llama}/{left,right}_leaning_response_avg_diff.pt`,
 so steering reproduces without re-running extraction. The trait-elicitation
