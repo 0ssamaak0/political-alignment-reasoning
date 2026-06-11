@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Political Alignment &amp; Reasoning — Judge Explorer</title>
+<link rel="preconnect" href="">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div class="brand">
+    <div class="brand-title">Judge Explorer</div>
+    <div class="brand-sub">Political alignment &amp; reasoning &middot; LLM judge outputs</div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab" data-mode="browser" aria-pressed="true">Example Browser</button>
+    <button class="tab" data-mode="strength" aria-pressed="false">Strength Explorer</button>
+  </nav>
+  <div class="header-actions">
+    <button id="glossaryBtn" class="ghost-btn" title="Definitions from the thesis">Glossary</button>
+    <button id="themeBtn" class="ghost-btn" title="Theme follows your device by default">Auto</button>
+  </div>
+</header>
+
+<main>
+  <!-- ============================ EXAMPLE BROWSER ============================ -->
+  <section id="view-browser" class="view">
+    <aside class="controls" id="browserControls"><!-- built in JS --></aside>
+    <div class="content">
+      <div id="browserStats" class="stats-wrap"><!-- built in JS --></div>
+      <div class="results-bar" id="resultsBar"><!-- built in JS --></div>
+      <div id="browserResults" class="cards"><!-- built in JS --></div>
+    </div>
+  </section>
+
+  <!-- =========================== STRENGTH EXPLORER =========================== -->
+  <section id="view-strength" class="view hidden">
+    <aside class="controls" id="strengthControls"><!-- built in JS --></aside>
+    <div class="content">
+      <div id="strengthReadout" class="readout-wrap"><!-- built in JS --></div>
+      <div class="panel chart-panel">
+        <div class="panel-head">
+          <h3>Reasoning and alignment across strength</h3>
+          <span class="panel-note" id="strengthChartNote"></span>
+        </div>
+        <div class="chart-box"><canvas id="strengthChart"></canvas></div>
+        <div class="legend-hint" id="strengthLegendHint"></div>
+      </div>
+      <div id="strengthResponses" class="panel responses-panel"><!-- built in JS --></div>
+    </div>
+  </section>
+</main>
+
+<!-- Glossary drawer -->
+<aside id="glossaryDrawer" class="drawer hidden" aria-hidden="true">
+  <div class="drawer-head">
+    <h2>Glossary</h2>
+    <button id="glossaryClose" class="ghost-btn">Close</button>
+  </div>
+  <p class="drawer-intro">Definitions are taken from the thesis. Each entry notes its source chapter.</p>
+  <div id="glossaryBody"></div>
+</aside>
+<div id="drawerScrim" class="scrim hidden"></div>
+
+<div id="loading" class="loading">Loading data&hellip;</div>
+
+<script src="assets/vendor/chart.umd.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/browser.js"></script>
+<script src="assets/js/strength.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
