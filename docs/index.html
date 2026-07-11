@@ -94,6 +94,36 @@
     .toc a:hover { color: var(--ink); }
   }
   @media (max-width: 1099px) { .toc { display: none; } }
+  .toc-mobile { display: none; }
+  @media (max-width: 1099px) {
+    .toc-mobile { display: block; max-width: var(--max); margin: 0 auto 28px; padding: 0 20px; }
+    .toc-mobile details {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface-2);
+      overflow: hidden;
+    }
+    .toc-mobile summary {
+      cursor: pointer;
+      padding: 12px 16px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--ink);
+      list-style-position: inside;
+    }
+    .toc-mobile summary:hover { background: var(--surface-3); }
+    .toc-mobile nav { padding: 4px 16px 12px; }
+    .toc-mobile nav a {
+      display: block;
+      padding: 8px 0;
+      font-size: 14.5px;
+      color: var(--ink-2);
+      text-decoration: none;
+      border-top: 1px solid var(--border);
+    }
+    .toc-mobile nav a:first-child { border-top: 0; }
+    .toc-mobile nav a:hover { color: var(--ink); }
+  }
   section { margin: 64px 0; }
   section:first-of-type { margin-top: 40px; }
   h2 { font-size: 26px; line-height: 1.3; letter-spacing: -0.005em; margin: 0 0 20px; }
@@ -218,7 +248,7 @@
     .claim, .lede { font-size: 18px; }
   }
 
-  @media print { .js-enhanced-only.js-optional { display: none !important; } .toc { display: none !important; } #jw-reveal { display: block !important; } .sl-case[hidden] { display: block !important; } #flip-widget .flip-card[hidden] { display: block !important; } }
+  @media print { .js-enhanced-only.js-optional { display: none !important; } .toc { display: none !important; } .toc-mobile { display: none !important; } #jw-reveal { display: block !important; } .sl-case[hidden] { display: block !important; } #flip-widget .flip-card[hidden] { display: block !important; } }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
@@ -316,6 +346,24 @@
   <a href="#limits">What we can conclude</a>
   <a href="#references">References</a>
 </nav>
+
+<div class="toc-mobile">
+  <details>
+    <summary>Contents</summary>
+    <nav aria-label="Table of contents">
+      <a href="#hook">Same argument</a>
+      <a href="#gap">Beyond measuring bias</a>
+      <a href="#study">What we built</a>
+      <a href="#steer-demo">Alignment as an intervention</a>
+      <a href="#double-standard">Partisan double standard</a>
+      <a href="#flip">Party label or content?</a>
+      <a href="#two-sources">Two sources of failure</a>
+      <a href="#measurement">Why scoring was not enough</a>
+      <a href="#limits">What we can conclude</a>
+      <a href="#references">References</a>
+    </nav>
+  </details>
+</div>
 
 <main id="main-article">
 
